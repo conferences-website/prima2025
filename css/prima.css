@@ -8,9 +8,9 @@
   --white-color:                  #f5f5f5;
   --primary-color:                #ffd60a;
   --secondary-color:              #ff6b6b;
-  --section-bg-color:             #f5f5f5;
+  --section-bg-color:             ##1b1f3b;
   --custom-btn-bg-color:          #ff6b6b;
-  --custom-btn-bg-hover-color:    #0077b6;
+  --custom-btn-bg-hover-color:    #ffd60a;
   --dark-color:                   #1b1f3b;
   --p-color:                      #1b1f3b;
   --border-color:                 #7fffd4;
@@ -208,8 +208,8 @@ strong {
   SECTION               
 -----------------------------------------*/
 .section-padding {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 25px;
 }
 
 .section-bg {
@@ -272,7 +272,7 @@ strong {
 .nav-tabs .nav-link.active h5,
 .nav-tabs .nav-link:focus h5, 
 .nav-tabs .nav-link:hover h5 {
-  color: #FFD60A;
+  color: #ff6b6b;
 }
 
 
@@ -322,6 +322,9 @@ strong {
   color: var(--white-color);
 }
 
+.bg-white {
+  background-color: #f5f5f5 !important;
+}
 
 /*---------------------------------------
   VIDEO              
@@ -494,24 +497,14 @@ strong {
 }
 
 
+
+
 /*---------------------------------------
   ABOUT              
 -----------------------------------------*/
 .about-section {
-  background: radial-gradient(circle at 30% 30%, #0077B6 25%, transparent 55%),
-  radial-gradient(circle at 70% 70%, #FF6B6B 25%, transparent 55%),
-  radial-gradient(circle at 50% 50%, #FFD60A 35%, transparent 60%),
-  linear-gradient(135deg, #1B1F3B, #0077B6);
 
-
-
-
-
-
-
-
-  
-  position: relative;
+position: relative;
 }
 
 .about-image {
@@ -761,7 +754,7 @@ strong {
 -----------------------------------------*/
 
 .horizontal-timeline .items {
-  border-top: 3px solid #e9ecef;
+  border-top: 3px solid #1b1f3b;
 }
 
 .horizontal-timeline .items .items-list {
@@ -776,7 +769,7 @@ strong {
   content: "";
   position: absolute;
   height: 36px;
-  border-right: 2px dashed #dee2e6;
+  border-right: 2px dashed #1b1f3b;
   top: 0;
 }
 
@@ -792,7 +785,7 @@ strong {
 }
 
 .badge {
-  background-color: #0077b6;
+  background-color: #1b1f3b;
 }
 
 @media (min-width: 1140px) {
@@ -807,3 +800,84 @@ strong {
   }
 
 }
+
+
+.team-item {
+  position: relative;
+  padding: 30px;
+  text-align: center;
+  transition: .5s;
+  z-index: 1;
+}
+
+.team-item::before,
+.team-item::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 40%;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  background: #f5f5f5;
+  box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+  transition: .5s;
+  z-index: -1;
+}
+
+.team-item::after {
+  top: auto;
+  bottom: 0;
+}
+
+.team-item:hover::before,
+.team-item:hover::after {
+  background: #1b1f3b;
+}
+
+.team-item h5,
+.team-item p {
+  transition: .5s;
+}
+
+.team-item:hover h5,
+.team-item:hover p {
+  color: #f5f5f5;
+}
+
+.team-item img {
+  padding: 15px;
+  border: 1px solid #1b1f3b;
+}
+
+.team-item a {
+  color: #1b1f3b;
+}
+
+.team-item a:hover {
+  color: #ff6b6b;
+}
+
+.img-fluid {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.dates-section {
+  background: url(../images/background.png); 
+  background-repeat: no-repeat;
+  
+  background-size: cover;
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+
+.hero-section a:hover {
+  color: #1b1f3b;
+}
+
