@@ -24,6 +24,17 @@
 
     <link href="css/prima.css" rel="stylesheet">
 
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/load-scroll.js"></script>
+
+  </main>
+
+  
+
+  
+
  
 </head>
 
@@ -52,7 +63,6 @@
                 <a class="navbar-brand" href="index.html">
                     PRIMA 2025
                 </a>
-
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -63,15 +73,29 @@
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="#section_2">CALL FOR PAPERS</a>
                         </li>
+                        
+                        <!-- <li class="nav-item">
+                          <a class="nav-link click-scroll" href="#section_3">SPEAKERS</a>
+                        </li> -->
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_3">IMPORTANT DATES</a>
+                            <a class="nav-link click-scroll" href="#section_4">IMPORTANT DATES</a>
                         </li>
 
                         <li class="nav-item">
-                          <a class="nav-link click-scroll" href="#section_4">ORGANIZERS</a>
+                          <a class="nav-link click-scroll" href="#section_5">ORGANIZERS</a>
                       </li>
-
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          INFORMATION
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="modena.html" target="_self">Discover Modena</a></li>
+                          <li><a class="dropdown-item" href="venue.html">Venue</a></li>
+                          <li><a class="dropdown-item" href="accommodation.html">Accommodation</a></li>
+                        </ul>
+                      </li>
+</ul>
                 </div>
             </div>
         </nav>
@@ -119,7 +143,7 @@
         </section>
 
 
-        <section class="about-section section-padding" id="section_2">
+        <section class="about-section section-padding mb-5" id="section_2">
             <div class="container">
                 <div class="row">
 
@@ -128,243 +152,233 @@
                         <nav class="d-flex justify-content-center">
                             <div class="nav nav-tabs align-items-baseline justify-content-center" id="nav-tab"
                                 role="tablist">
+
+                                
+
                                 <button class="nav-link active" id="nav-scope-tab" data-bs-toggle="tab"
                                     data-bs-target="#nav-scope" type="button" role="tab"
-                                    aria-controls="nav-scope" aria-selected="false">
-                                    <h5>Scope & background</h5>
+                                    aria-controls="nav-scope" aria-selected="true">
+                                    <h6>Scope & background</h6>
                                 </button>
 
                                 <button class="nav-link" id="nav-topics-tab" data-bs-toggle="tab"
                                     data-bs-target="#nav-topics" type="button" role="tab"
                                     aria-controls="nav-topics" aria-selected="false">
-                                    <h5>List of topics</h5>
+                                    <h6>List of topics</h6>
                                 </button>
 
                                 <button class="nav-link" id="nav-info-tab" data-bs-toggle="tab"
                                     data-bs-target="#nav-info" type="button" role="tab"
                                     aria-controls="nav-info" aria-selected="false">
-                                    <h5>Information for authors</h5>
+                                    <h6>Information for authors</h6>
+                                </button>
+
+                                <button class="nav-link" id="nav-awards-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-awards" type="button" role="tab"
+                                    aria-controls="nav-awards" aria-selected="false">
+                                    <h6>Prizes & Awards</h6>
                                 </button>
                             </div>
                         </nav>
 
                         <div class="tab-content shadow-lg mt-5" id="nav-tabscope">
-                            <div class="tab-pane fade show active" id="nav-scope" role="tabpanel"
-                                aria-labelledby="nav-scope-tab">
-                                <p style="text-align: justify;">Software systems are rapidly becoming more intelligent in the functionality they offer to
-                                    users. They are also becoming more decentralized, with components that act autonomously
-                                    and must communicate among themselves or with human users, to achieve their goals.
-                                    Examples of such systems include those in healthcare, disaster management, e-business,
-                                    and smart grids. A multi-agent perspective is crucial to the proper conceptualization,
-                                    deployment, and governance of such systems. Rooted in solid computational and software
-                                    engineering foundations, this perspective offers abstractions such as intelligent agents,
-                                    protocols, norms, organizations, trust and incentives, among others. As a large, but still
-                                    growing research field of Computer Science, multi-agent systems today remain a unique
-                                    enabler of interdisciplinary research.</p>
-                            </div>
+                    
+                      
 
-                            <div class="tab-pane fade" id="nav-topics" role="tabpanel"
-                            aria-labelledby="nav-topics-tab">
-                            <div class="row row-cols-1 row-cols-md-3 g-4">
-                                <div class="col">
-                                  <div class="card h-100">
-                                    <div class="card-body">
-                                      <h5 class="card-title">Logic and Reasoning</h5>
-                                      <ul style="list-style-type:circle;">
-                                        <li>Logics of Agency</li>
-                                        <li>Logics of Multi-Agent Systems</li>
-                                        <li>Logics of Belief and Knowledge</li>
-                                        <li>Norms, Obligations, Deontic Logic</li>
-                                        <li>Logics and Game Theory</li>
-                                        <li>Uncertainty in Agent Systems</li>
-                                      </ul>  
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col">
-                                  <div class="card h-100">
-                                    <div class="card-body">
-                                      <h5 class="card-title">Agent and Multi-Agent Learning</h5>
-                                      <ul style="list-style-type:circle;">
-                                        <li>Reinforcement Learning</li>
-                                        <li>Evolutionary approaches</li>
-                                        <li>Machine Learning Problems in Multi-Agent Systems</li>
-                                        <li>Agents Embodied with Large Language Models</li>
-                                      </ul>  
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col">
-                                  <div class="card h-100">
-                                    <div class="card-body">
-                                      <h5 class="card-title">Engineering Multi-Agent Systems</h5>
-                                      <ul style="list-style-type:circle;">
-                                        <li>Agent-Oriented Software Engineering</li>
-                                        <li>Interaction Protocols</li>
-                                        <li>Formal Specification and Verification</li>
-                                        <li>Agent Programming Languages</li>
-                                        <li>Middleware and Platforms</li>
-                                        <li>Testing, Debugging, and Evolution</li>
-                                        <li>Deployed System Case Studies</li>
-                                      </ul>  
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card h-100">
-                                      <div class="card-body">
-                                        <h5 class="card-title">Agent-Based Modeling and Simulation</h5>
-                                        <ul style="list-style-type:circle;">
-                                          <li>Simulation Languages and Platforms</li>
-                                          <li>Artificial Societies</li>
-                                          <li>Virtual Environments</li>
-                                          <li>Emergent Behavior</li>
-                                          <li>Modeling System Dynamics</li>
-                                          <li>Application Case Studies</li>
-                                        </ul>  
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="col">
-                                    <div class="card h-100">
-                                      <div class="card-body">
-                                        <h5 class="card-title">Collaboration & Coordination</h5>
-                                        <ul style="list-style-type:circle;">
-                                          <li>Multi-Agent Planning</li>
-                                          <li>Distributed Problem Solving and Optimization</li>
-                                          <li>Teamwork</li>
-                                          <li>Coalition Formation</li>
-                                          <li>Negotiation</li>
-                                          <li>Trust and Reputation</li>
-                                          <li>Commitments</li>
-                                          <li>Institutions and Organizations</li>
-                                          <li>Normative Systems</li>
-                                        </ul>  
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="col">
-                                    <div class="card h-100">
-                                      <div class="card-body">
-                                        <h5 class="card-title">Algorithmic Game Theory</h5>
-                                        <ul style="list-style-type:circle;">
-                                          <li>Auctions and Mechanism Design</li>
-                                          <li>Bargaining and Negotiation</li>
-                                          <li>Behavioral Game Theory</li>
-                                          <li>Cooperative Games: Theory, Analysis, Computation</li>
-                                          <li>Game Theory for Practical Applications</li>
-                                          <li>Noncooperative Games: Theory, Analysis, Computation</li>
-                                        </ul>  
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="col">
-                                    <div class="card h-100">
-                                      <div class="card-body">
-                                        <h5 class="card-title">Engineering Multi-Agent Systems</h5>
-                                        <ul style="list-style-type:circle;">
-                                          <li>Agent-Oriented Software Engineering</li>
-                                          <li>Interaction Protocols</li>
-                                          <li>Formal Specification and Verification</li>
-                                          <li>Agent Programming Languages</li>
-                                          <li>Middleware and Platforms</li>
-                                          <li>Testing, Debugging, and Evolution</li>
-                                          <li>Deployed System Case Studies</li>
-                                        </ul>  
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="col">
-                                    <div class="card h-100">
-                                      <div class="card-body">
-                                        <h5 class="card-title">Computational Social Choice</h5>
-                                        <ul style="list-style-type:circle;">
-                                          <li>Voting</li>
-                                          <li>Fair Division and Resource Allocation</li>
-                                          <li>Matching under Preferences</li>
-                                          <li>Coalition Formation Games</li>
-                                          <li>Aggregation of Beliefs, Opinions, Judgments</li>
-                                          <li>Ethics and Computational Social Choice</li>
-                                          <li>Participatory Budgeting</li>
-                                          <li>Facility Location</li>
-                                          <li>Communication Issues in Social Choice, Distortion</li>
-                                          <li>Behavioral Social Choice </li>
-                                        </ul>  
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="col">
-                                    <div class="card h-100">
-                                      <div class="card-body">
-                                        <h5 class="card-title">Human-Agent Interaction</h5>
-                                        <ul style="list-style-type:circle;">
-                                          <li>Adaptive Personal Assistants</li>
-                                          <li>Embodied Conversational Agents</li>
-                                          <li>Virtual Characters</li>
-                                          <li>Multimodal User Interfaces</li>
-                                          <li>Mobile Agents</li>
-                                          <li>Human-Robot Interaction</li>
-                                          <li>Affective Computing</li>
-                                        </ul>  
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="col">
-                                    <div class="card h-100">
-                                      <div class="card-body">
-                                        <h5 class="card-title">Decentralized Paradigms</h5>
-                                        <ul style="list-style-type:circle;">
-                                          <li>Cloud Computing</li>
-                                          <li>Service-Oriented Computing</li>
-                                          <li>Data spaces</li>
-                                          <li>Big data</li>
-                                          <li>Cybersecurity</li>
-                                          <li>Robotics and Multirobot Systems</li>
-                                          <li>Ubiquitous Computing</li>
-                                          <li>Social Computing</li>
-                                          <li>Ubiquitous Computing</li>
-                                          <li>Internet of Things</li>
-                                          <li>Edge Computing</li>
-                                          <li>Blockchain</li>
-                                        </ul>  
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="col">
-                                    <div class="card h-100">
-                                      <div class="card-body">
-                                        <h5 class="card-title">Ethics and Social Issues</h5>
-                                        <ul style="list-style-type:circle;">
-                                          <li>Explainable Artificial Intelligence</li>
-                                          <li>Ethics of AI Systems</li>
-                                          <li>Multi-Agent Systems for Social Good</li>
-                                        </ul>  
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="col">
-                                    <div class="card h-100">
-                                      <div class="card-body">
-                                        <h5 class="card-title">Application Domains for Multi-Agent Systems</h5>
-                                        <ul style="list-style-type:circle;">
-                                          <li>Healthcare, Pandemics Management</li>
-                                          <li>Autonomous Systems</li>
-                                          <li>Transport and Logistics</li>
-                                          <li>Emergency and Disaster Management</li>
-                                          <li>Energy and Utilities Management</li>
-                                          <li>Sustainability and Resource Management</li>
-                                          <li>Games and Entertainment</li>
-                                          <li>e-Business, e-Government, and e-Learning</li>
-                                          <li>Smart Cities</li>
-                                          <li>Financial markets</li>
-                                          <li>Legal applications</li>
-                                          <li>Crowdsourcing</li>
-                                        </ul>  
-                                      </div>
-                                    </div>
-                                  </div>
-                              </div>
-                        </div>
+<div class="tab-pane fade show active" id="nav-scope" role="tabpanel"
+  aria-labelledby="nav-scope-tab">
+  <p style="text-align: justify;">Software systems are rapidly becoming more intelligent in the functionality they offer to
+    users. They are also becoming more decentralized, with components that act autonomously
+    and must communicate among themselves or with human users, to achieve their goals.
+    Examples of such systems include those in healthcare, disaster management, e-business,
+    and smart grids. A multi-agent perspective is crucial to the proper conceptualization,
+    deployment, and governance of such systems. Rooted in solid computational and software
+    engineering foundations, this perspective offers abstractions such as intelligent agents,
+    protocols, norms, organizations, trust and incentives, among others. As a large, but still
+    growing research field of Computer Science, multi-agent systems today remain a unique
+    enabler of interdisciplinary research.</p>
+</div>
+              
+<div class="tab-pane fade" id="nav-topics" role="tabpanel"
+aria-labelledby="nav-topics-tab">
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <!-- Each topic card -->
+  <div class="col">
+    <div class="service-item rounded overflow-hidden d-flex flex-column h-100 w-100 text-start p-4 border">
+      <h5 class="mb-3">Logic and Reasoning</h5>
+      <ul style="list-style-type:circle;">
+        <li>Logics of Agency</li>
+        <li>Logics of Multi-Agent Systems</li>
+        <li>Logics of Belief and Knowledge</li>
+        <li>Norms, Obligations, Deontic Logic</li>
+        <li>Logics and Game Theory</li>
+        <li>Uncertainty in Agent Systems</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col">
+    <div class="service-item rounded overflow-hidden d-flex flex-column h-100 w-100 text-start p-4 border">
+      <h5 class="mb-3">Agent and Multi-Agent Learning</h5>
+      <ul style="list-style-type:circle;">
+        <li>Reinforcement Learning</li>
+        <li>Evolutionary approaches</li>
+        <li>Machine Learning Problems in Multi-Agent Systems</li>
+        <li>Agents Embodied with Large Language Models</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col">
+    <div class="service-item rounded overflow-hidden d-flex flex-column h-100 w-100 text-start p-4 border">
+      <h5 class="mb-3">Engineering Multi-Agent Systems</h5>
+      <ul style="list-style-type:circle;">
+        <li>Agent-Oriented Software Engineering</li>
+        <li>Interaction Protocols</li>
+        <li>Formal Specification and Verification</li>
+        <li>Agent Programming Languages</li>
+        <li>Middleware and Platforms</li>
+        <li>Testing, Debugging, and Evolution</li>
+        <li>Deployed System Case Studies</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col">
+    <div class="service-item rounded overflow-hidden d-flex flex-column h-100 w-100 text-start p-4 border">
+      <h5 class="mb-3">Agent-Based Modeling and Simulation</h5>
+      <ul style="list-style-type:circle;">
+        <li>Simulation Languages and Platforms</li>
+        <li>Artificial Societies</li>
+        <li>Virtual Environments</li>
+        <li>Emergent Behavior</li>
+        <li>Modeling System Dynamics</li>
+        <li>Application Case Studies</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col">
+    <div class="service-item rounded overflow-hidden d-flex flex-column h-100 w-100 text-start p-4 border">
+      <h5 class="mb-3">Collaboration & Coordination</h5>
+      <ul style="list-style-type:circle;">
+        <li>Multi-Agent Planning</li>
+        <li>Distributed Problem Solving and Optimization</li>
+        <li>Teamwork</li>
+        <li>Coalition Formation</li>
+        <li>Negotiation</li>
+        <li>Trust and Reputation</li>
+        <li>Commitments</li>
+        <li>Institutions and Organizations</li>
+        <li>Normative Systems</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col">
+    <div class="service-item rounded overflow-hidden d-flex flex-column h-100 w-100 text-start p-4 border">
+      <h5 class="mb-3">Algorithmic Game Theory</h5>
+      <ul style="list-style-type:circle;">
+        <li>Auctions and Mechanism Design</li>
+        <li>Bargaining and Negotiation</li>
+        <li>Behavioral Game Theory</li>
+        <li>Cooperative Games: Theory, Analysis, Computation</li>
+        <li>Game Theory for Practical Applications</li>
+        <li>Noncooperative Games: Theory, Analysis, Computation</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col">
+    <div class="service-item rounded overflow-hidden d-flex flex-column h-100 w-100 text-start p-4 border">
+      <h5 class="mb-3">Engineering Multi-Agent Systems</h5>
+      <ul style="list-style-type:circle;">
+        <li>Agent-Oriented Software Engineering</li>
+        <li>Interaction Protocols</li>
+        <li>Formal Specification and Verification</li>
+        <li>Agent Programming Languages</li>
+        <li>Middleware and Platforms</li>
+        <li>Testing, Debugging, and Evolution</li>
+        <li>Deployed System Case Studies</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col">
+    <div class="service-item rounded overflow-hidden d-flex flex-column h-100 w-100 text-start p-4 border">
+      <h5 class="mb-3">Computational Social Choice</h5>
+      <ul style="list-style-type:circle;">
+        <li>Voting</li>
+        <li>Fair Division and Resource Allocation</li>
+        <li>Matching under Preferences</li>
+        <li>Coalition Formation Games</li>
+        <li>Aggregation of Beliefs, Opinions, Judgments</li>
+        <li>Ethics and Computational Social Choice</li>
+        <li>Participatory Budgeting</li>
+        <li>Facility Location</li>
+        <li>Communication Issues in Social Choice, Distortion</li>
+        <li>Behavioral Social Choice</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col">
+    <div class="service-item rounded overflow-hidden d-flex flex-column h-100 w-100 text-start p-4 border">
+      <h5 class="mb-3">Human-Agent Interaction</h5>
+      <ul style="list-style-type:circle;">
+        <li>Adaptive Personal Assistants</li>
+        <li>Embodied Conversational Agents</li>
+        <li>Virtual Characters</li>
+        <li>Multimodal User Interfaces</li>
+        <li>Mobile Agents</li>
+        <li>Human-Robot Interaction</li>
+        <li>Affective Computing</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col">
+    <div class="service-item rounded overflow-hidden d-flex flex-column h-100 w-100 text-start p-4 border">
+      <h5 class="mb-3">Decentralized Paradigms</h5>
+      <ul style="list-style-type:circle;">
+        <li>Cloud Computing</li>
+        <li>Service-Oriented Computing</li>
+        <li>Data spaces</li>
+        <li>Big data</li>
+        <li>Cybersecurity</li>
+        <li>Robotics and Multirobot Systems</li>
+        <li>Ubiquitous Computing</li>
+        <li>Social Computing</li>
+        <li>Ubiquitous Computing</li>
+        <li>Internet of Things</li>
+        <li>Edge Computing</li>
+        <li>Blockchain</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col">
+    <div class="service-item rounded overflow-hidden d-flex flex-column h-100 w-100 text-start p-4 border">
+      <h5 class="mb-3">Ethics and Social Issues</h5>
+      <ul style="list-style-type:circle;">
+        <li>Explainable Artificial Intelligence</li>
+        <li>Ethics of AI Systems</li>
+        <li>Multi-Agent Systems for Social Good</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col">
+    <div class="service-item rounded overflow-hidden d-flex flex-column h-100 w-100 text-start p-4 border">
+      <h5 class="mb-3">Application Domains for Multi-Agent Systems</h5>
+      <ul style="list-style-type:circle;">
+        <li>Healthcare, Pandemics Management</li>
+        <li>Autonomous Systems</li>
+        <li>Transport and Logistics</li>
+        <li>Emergency and Disaster Management</li>
+        <li>Energy and Utilities Management</li>
+        <li>Sustainability and Resource Management</li>
+        <li>Games and Entertainment</li>
+        <li>e-Business, e-Government, and e-Learning</li>
+        <li>Smart Cities</li>
+        <li>Financial markets</li>
+        <li>Legal applications</li>
+        <li>Crowdsourcing</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+
 
                             <div class="tab-pane fade" id="nav-info" role="tabpanel"
                                 aria-labelledby="nav-info-tab">
@@ -373,17 +387,18 @@
                                     development of applications or prototypes of deployed agent systems, and of experiments
                                     that demonstrate novel agent system capabilities. In addition to this, we also encourage the
                                     submission of position and review papers that are of particular relevance to the multi-agent
-                                    community.<br><br>
-
-                                    Type of submissions: 
-                                    <ul>
-                                      <li>Full papers, 16 pages plus references</li> 
+                                    community.
+                                </p>
+                                <p style="text-align: justify;">
+                                    <strong>Type of submissions:</strong><br>
+                                    <ul style="list-style-type:circle;">
+                                      <li>Full papers, 16 pages plus references</li>
                                       <li>Short papers, 4 pages plus references</li>
                                       <li>Position papers, 2 pages plus references</li>
                                     </ul>
-                                    <br>
-
-                                    The papers submitted must be in the 
+                                    </p>
+                                    <p style="text-align: justify;">
+                                    The papers submitted can be up to <b>16 pages in length</b>, including references, in the 
                                     <a href="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines"><strong>
                                     LNCS format</strong></a>. All submitted papers must be in a form suitable for <b>double-blind</b> review.
                                     Specifically, in order to make blind reviewing possible, authors must omit their names and
@@ -410,7 +425,46 @@
                                        well as for software development and support.</small>
                                   </p>
                             </div>
+                               <!-- AWARDS CONTENT -->
+<div class="tab-pane fade show" id="nav-awards" role="tabpanel" aria-labelledby="nav-awards-tab">
+  <div class="text-center mx-auto">
+    <p>
+      PRIMA 2025 recognises excellence in research through two competitive awards, sponsored by the conference and its community.
+    </p>
+  </div>
 
+  <div class="row g-4 justify-content-center">
+    <!-- Aditya Ghose Best Paper Award -->
+    <div class="col-md-6 col-lg-4 d-flex wow fadeInUp" data-wow-delay="0.1s">
+      <div class="service-item rounded overflow-hidden d-flex flex-column h-100 w-100 text-center p-4 border">
+        <div class="service-icon mb-3">
+          <i class="bi bi-trophy fs-3"></i>
+        </div>
+        <h4 class="mb-3">Aditya Ghose <br> Best Paper Award</h4>
+        <p class="flex-grow-1">
+          This award recognises the most outstanding paper accepted to PRIMA 2025, based on originality, technical soundness, and relevance to the multi-agent systems community.
+          <br><br><strong>Prize: €1000</strong>
+        </p>
+      </div>
+    </div>
+    
+  
+    <!-- Martin Purvis Student Best Paper Award -->
+    <div class="col-md-6 col-lg-4 d-flex wow fadeInUp" data-wow-delay="0.3s">
+      <div class="service-item rounded overflow-hidden d-flex flex-column h-100 w-100 text-center p-4 border">
+        <div class="service-icon mb-3">
+          <i class="bi bi-mortarboard fs-3"></i>
+        </div>
+        <h4 class="mb-3">Martin Purvis Student <br> Best Paper Award</h4>
+        <p class="flex-grow-1">
+          Presented to the best paper whose first author is a student. This award celebrates early-career innovation and research excellence in the field of multi-agent systems.
+          <br><br><strong>Prize: €500 </strong>
+        </p>
+      </div>
+    </div>
+  </div>
+  
+</div>
                            
 
                         </div>
@@ -422,8 +476,89 @@
             </div>
         </section>
 
+        <!-- <section class="speaker-section section-padding" id="section_3">
+          <div class="container">
+            <h2 class="text-center mb-4">Invited Speakers</h2>
+        
+            <article class="postcard dark blue">
+              <a class="postcard__img_link" href="#">
+                <img class="postcard__img" src="images/ito.jpg" alt="Image Title" />
+              </a>
+              <div class="postcard__text">
+                <h1 class="postcard__title blue"><a href="#">Takayuki Ito</a></h1>
+                <h6 class="text-white">HyperDemocracy: Large-scale Consensus Support Platform based on Multiagent Systems
+                </h2>
+                <div class="postcard__subtitle small">
+                  <time datetime="2020-05-25 12:00:00">
+                    <i class="fas fa-calendar-alt mr-2"></i>TBA
+                  </time>
+                </div>
+                <div class="postcard__bar"></div>
+                <div class="postcard__preview-txt">The rapid development of AI, smartphones, and the Internet, as well as the recent changes in the environment caused by COVID-19, have made the realization of AI-powered social systems more and more realistic. We envision the Hyperdemocary Platform, a social network that supports software agents and humans to participate, discuss, and make a collaborative, democratic consensus. Specifically, multiple agents will be stationed in social networks as the platform of democracy, act with humans, mediate decisions and interactions, and support enhanced and scalable consensus-building and collective decision-making. In particular, while collecting opinions and preferences, software agents are attentive to the emotions of the participants and help them to reach a consensus that is both proactive and satisfying efficiently. In other words, the system solves the trade-off between proactive and satisfied consensus building by humans and super-efficient and super-rational consensus building by software agents. Social problems such as flaming, fake news, group polarization, and gerrymandering have been widely reported in the SNS. Our agents will solve these problems by collaborating with humans within the platform. In this talk, I will introduce some results of our recent work.</div>
+                <ul class="postcard__tagbox">
+                  <li class="tag__item"><a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Bio
+                  </a></li>
+                  <div class="collapse" id="collapseExample">
+                    <div class="card card-body text-black">
+                      Dr. Takayuki Ito is Professor of Kyoto University. He received the B.E., M.E, and Doctor of Engineering from the Nagoya Institute of Technology in 1995, 1997, and 2000, respectively. From 1999 to 2001, he was a research fellow of the Japan Society for the Promotion of Science (JSPS). From 2000 to 2001, he was a visiting researcher at USC/ISI (University of Southern California/Information Sciences Institute). From April 2001 to March 2003, he was an associate professor of Japan Advanced Institute of Science and Technology (JAIST). From April 2004 to March 2013, he was an associate professor of Nagoya Institute of Technology. From April 2014 to September 2020, he was a professor of Nagoya Institute of Technology. From October 2020, he is a professor of Kyoto University. From 2005 to 2006, he is a visiting researcher at Division of Engineering and Applied Science, Harvard University and a visiting researcher at the Center for Coordination Science, MIT Sloan School of Management. From 2008 to 2010, he was a visiting researcher at the Center for Collective Intelligence, MIT Sloan School of Management. From 2017 to 2018, he was an invited researcher of Artificial Intelligence Center of AIST, JAPAN. From March 5, 2019, he is the CTO of AgreeBit, inc. He is Steering Committee Chair of PRIMA,  Steering Committee Member of PRICAI, Executive Committee Member of IEEE Computer Society Technical Committee on Intelligent Informatics, the PC-chair of AAMAS2013, PRIMA2009, the Local Arrangements Chair of IJCAI-PRICAI2020, General-Chair of PRICAI2024, PRIMA2024, PRIMA2020, PRIMA2014, and was a SPC/PC member in many top-level conferences (IJCAI, AAMAS, ECAI, AAAI, etc). He was a board member of IFAAMAS. He received the JSAI (Japan Society for Artificial Intelligence) Contribution Award, the JSAI Achievement Award, the JSPS Prize, 2014, the Prize for Science and Technology (Research Category), The Commendation for Science and Technology by the Minister of Education, Culture, Sports, Science, and Technology, 2013, the Young Scientists' Prize, The Commendation for Science and Technology by the Minister of Education, Culture, Sports, Science, and Technology, 2007, the Nagao Special Research Award of the Information Processing Society of Japan, 2007, the Best Paper Award of AAMAS2006, the 2005 Best Paper Award from Japan Society for Software Science and Technology, the Best Paper Award in the 66th annual conference of 66th Information Processing Society of Japan, and the Super Creator Award of 2004 IPA Exploratory Software Creation Projects. He is Principle Investigator of the Japan Cabinet Funding Program for Next Generation World-Leading Researchers (NEXT Program). Further, he has several companies, which are handling web-based systems and enterprise distributed systems. His main research interests include multi-agent systems, intelligent agents, collective intelligence, group decision support system, etc.
+                    </div>
+                  </div>
+                </ul>
+              </div>
+            </article>
+            <article class="postcard dark red">
+              <a class="postcard__img_link" href="#">
+                <img class="postcard__img" src="images/baldoni.jpg" alt="Image Title" />	
+              </a>
+              <div class="postcard__text">
+                <h1 class="postcard__title red"><a href="#">&nbsp;Matteo Baldoni</a></h1>
+                <div class="postcard__subtitle small">
+                  <time datetime="2020-05-25 12:00:00">
+                    <i class="fas fa-calendar-alt mr-2"></i>&nbsp;&nbsp;TBA
+                  </time>
+                </div>
+                <div class="postcard__bar"></div>
+                <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                <ul class="postcard__tagbox">
+                  <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                  <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                  <li class="tag__item play red">
+                    <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <article class="postcard dark green">
+              <a class="postcard__img_link" href="#">
+                <img class="postcard__img" src="images/lomuscio.jpg" alt="Image Title" />
+              </a>
+              <div class="postcard__text">
+                <h1 class="postcard__title green"><a href="#">Alessio Lomuscio</a></h1>
+                <div class="postcard__subtitle small">
+                  <time datetime="2020-05-25 12:00:00">
+                    <i class="fas fa-calendar-alt mr-2"></i>TBA
+                  </time>
+                </div>
+                <div class="postcard__bar"></div>
+                <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                <ul class="postcard__tagbox">
+                  <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                  <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                  <li class="tag__item play green">
+                    <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                  </li>
+                </ul>
+              </div>
+            </article>
+            
+          </div>
+        </section> -->
+        
+        
 
-        <section class="dates-section section-padding mb-5" id="section_3" >
+
+        <section class="dates-section section-padding" id="section_4" >
             <div class="container">
                 <h2 class="text-center mb-4">Important dates</h2>
                     <div class="container-fluid py-5">
@@ -470,198 +605,236 @@
             </div>
         </section>
 
-        <section class="organizers-section mb-5" id="section_4">
+        <section class="organizers-section section-padding mb-5" id="section_5">
           <div class="container">
-              <h2 class="text-center mb-4">Organizers</h2>
-                <div id="carouselExampleCaptions" class="carousel slide">
-                  
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <div class="carousel-caption position-relative text-center">
-                        <h6>General Chairs</h6>
-                      </div>
-                      <div class="row justify-content-center">
-                        <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="team-item">
-                                <h5>Angelo Ferrando</h5>
-                                <p class="mb-4">UNIMORE</p>
-                                <img class="img-fluid rounded-circle w-75 mb-4" src="images/ferrando.jpg" alt="Angelo Ferrando">
-                                <div class="d-flex justify-content-center">
-                                    <a class="btn btn-square secondary-color bg-white m-1" href="mailto:prima2025.general.chairs@gmail.com"><i class="bi bi-envelope"></i></a>
-                                    <a class="btn btn-square bg-white m-1" href="https://angeloferrando.github.io/website/"><i class="bi bi-globe2"></i></a>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="team-item">
-                                <h5>Vadim Malvone</h5>
-                                <p class="mb-4">Télécom Paris</p>
-                                <img class="img-fluid rounded-circle w-75 mb-4" src="images/malvone.jpg" alt="Vadim Malvone">
-                                <div class="d-flex justify-content-center">
-                                    <a class="btn btn-square bg-white m-1" href="mailto:prima2025.general.chairs@gmail.com"><i class="bi bi-envelope"></i></i></a>
-                                    <a class="btn btn-square bg-white m-1" href="https://vadimmalvone.github.io/"><i class="bi bi-globe2"></i></a>
-                                    </div>
-                            </div>
-                        </div>
-                        </div>
-                      
-                    </div>
-                    <div class="carousel-item">
-                      <div class="carousel-caption position-relative text-center">
-                        <h6>Program Chairs</h6>
-                      </div>
-                        <div class="row justify-content-center">
-                        <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.5s">
-                          <div class="team-item">
-                              <h5>Federico Bergenti</h5>
-                              <p class="mb-4">Università di Parma</p>
-                              <img class="img-fluid rounded-circle w-75 mb-4" src="images/bergenti.jpg" alt="Federico Bergenti">
-                              <div class="d-flex justify-content-center">
-                                <a class="btn btn-square bg-white m-1" href="mailto:prima2025.program.chairs@gmail.com"><i class="bi bi-envelope"></i></i></a>
-                                <a class="btn btn-square bg-white m-1" href="https://www.ailab.unipr.it/bergenti/"><i class="bi bi-globe2"></i></a>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.7s">
-                          <div class="team-item">
-                              <h5>Catalin Dima</h5>
-                              <p class="mb-4">Université Paris-Est Créteil</p>
-                              <img class="img-fluid rounded-circle w-75 mb-4" src="images/dima.jpg" alt="Catalin Dima">
-                              <div class="d-flex justify-content-center">
-                                <a class="btn btn-square bg-white m-1" href="mailto:prima2025.program.chairs@gmail.com"><i class="bi bi-envelope"></i></i></a>
-                                <a class="btn btn-square bg-white m-1" href="https://lacl.u-pec.fr/dima/"><i class="bi bi-globe2"></i></a>
-                              </div>
-                          </div>
-                      
-                        
-                    </div>
-                      
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <div class="carousel-caption position-relative text-center">
-                        <h6>PhD Day Chairs</h6>
-                      </div>
-                      <div class="row justify-content-center">
-                        <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.7s">
-                          <div class="team-item">
-                            <h5>James Ortiz</h5>
-                            <p class="mb-4">Télécom Paris</p>
-                            <img class="img-fluid rounded-circle w-75 mb-4" src="images/ortiz.jpg" alt="James Ortiz">
-                            <div class="d-flex justify-content-center">
-                              <a class="btn btn-square bg-white m-1" href="mailto:prima2025.phdday.chairs@gmail.com"><i class="bi bi-envelope"></i></i></a>
-                              <a class="btn btn-square bg-white m-1" href="https://scholar.google.com/citations?user=x5XHr_AAAAAJ&hl=en"><i class="bi bi-globe2"></i></a>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.7s">
-                          <div class="team-item">
-                              <h5>Marija Slavkovik</h5>
-                              <p class="mb-4">University of Bergen</p>
-                              <img class="img-fluid rounded-circle w-75 mb-4" src="images/slavkovik.jpg" alt="Marija Slavkovik">
-                              <div class="d-flex justify-content-center">
-                                <a class="btn btn-square bg-white m-1" href="mailto:prima2025.phdday.chairs@gmail.com"><i class="bi bi-envelope"></i></i></a>
-                                <a class="btn btn-square bg-white m-1" href="https://slavkovik.com/index.html"><i class="bi bi-globe2"></i></a>
-                              </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <div class="carousel-caption position-relative text-center">
-                        <h6>Sponsorship Chairs</h6>
-                      </div>
-                      <div class="row justify-content-center">
-                        <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.7s">
-                          <div class="team-item">
-                              <h5>Paolo Burgio</h5>
-                              <p class="mb-4">UNIMORE</p>
-                              <img class="img-fluid rounded-circle w-75 mb-4" src="images/burgio.jpg" alt="Paolo Burgio">
-                              <div class="d-flex justify-content-center">
-                                <a class="btn btn-square bg-white m-1" href="mailto:paolo.burgio@unimore.it"><i class="bi bi-envelope"></i></i></a>
-                                <a class="btn btn-square bg-white m-1" href="https://hipert.unimore.it/people/paolob/"><i class="bi bi-globe2"></i></a>
-                              </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.7s">
-                          <div class="team-item">
-                            <h5>Filippo Muzzini</h5>
-                            <p class="mb-4">UNIMORE</p>
-                            <img class="img-fluid rounded-circle w-75 mb-4" src="images/muzzini.jpg" alt="Filippo Muzzini">
-                            <div class="d-flex justify-content-center">
-                              <a class="btn btn-square bg-white m-1" href="mailto:filippo.muzzini@unimore.it"><i class="bi bi-envelope"></i></i></a>
-                              <a class="btn btn-square bg-white m-1" href="https://personale.unimore.it/rubrica/dettaglio/fmuzzini"><i class="bi bi-globe2"></i></a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+            <h2 class="text-center mb-4">Organizers</h2>
+            <div id="carouselExampleCaptions" class="carousel slide">
+        
+              <div class="carousel-inner">
+                <div class="carousel-item active mb-5">
+                  <div class="carousel-caption position-relative text-center">
+                    <h6>General Chairs</h6>
                   </div>
-                      <div class="carousel-item">
-                        <div class="carousel-caption position-relative text-center">
-                          <h6>Local Chairs</h6>
-                        </div>
-                        <div class="row justify-content-center">
-                          <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.7s">
-                            <div class="team-item">
-                              <h5>Giacomo Cabri</h5>
-                              <p class="mb-4">UNIMORE</p>
-                              <img class="img-fluid rounded-circle w-75 mb-4" src="images/cabri.png" alt="Giacomo Cabri">
-                              <div class="d-flex justify-content-center">
-                                <a class="btn btn-square bg-white m-1" href="mailto:prima2025.local.chairs@gmail.com"><i class="bi bi-envelope"></i></i></a>
-                                <a class="btn btn-square bg-white m-1" href="https://personale.unimore.it/rubrica/dettaglio/gcabri"><i class="bi bi-globe2"></i></a>
-                              </div>
+                  <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.1s">
+                      <div class="rounded shadow overflow-hidden team-card">
+                        <div class="position-relative">
+                          <img class="" src="images/ferrando.jpg" alt="Angelo Ferrando">
+                          <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                            <a class="btn btn-square mx-1" href="mailto:prima2025.general.chairs@gmail.com"><i class="bi bi-envelope"></i></a>
+                            <a class="btn btn-square mx-1" href="https://angeloferrando.github.io/website/"><i class="bi bi-globe2"></i></a>
                           </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.7s">
-                          <div class="team-item">
-                            <h5>Stefania Monica</h5>
-                            <p class="mb-4">UNIMORE</p>
-                            <img class="img-fluid rounded-circle w-75 mb-4" src="images/monica.jpg" alt="Giacomo Cabri">
-                            <div class="d-flex justify-content-center">
-                              <a class="btn btn-square bg-white m-1" href="mailto:prima2025.local.chairs@gmail.com"><i class="bi bi-envelope"></i></i></a>
-                              <a class="btn btn-square bg-white m-1" href="https://personale.unimore.it/rubrica/dettaglio/monica"><i class="bi bi-globe2"></i></a>
-                            </div>
-                        </div>
-                      </div>         
-              </div>
-                      
-                    </div>
-                    <div class="carousel-item">
-                      <div class="carousel-caption position-relative text-center">
-                        <h6>Publicity Chair</h6>
-                      </div>
-                      <div class="row justify-content-center">
-                        <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.7s">
-                          <div class="team-item">
-                            <h5>Vladana Perlić</h5>
-                            <p class="mb-4">Télécom Paris</p>
-                            <img class="img-fluid rounded-circle w-75 mb-4" src="images/perlic.png" alt="Vladana Perlić">
-                            <div class="d-flex justify-content-center">
-                              <a class="btn btn-square bg-white m-1"><i class="bi bi-envelope"></i></i></a>
-                              <a class="btn btn-square bg-white m-1"><i class="bi bi-globe2"></i></a>
-                            </div>
+                        <div class="text-center p-4 mt-3">
+                          <h5 class="fw-bold mb-0">Angelo Ferrando</h5>
+                          <p class="mb-4">UNIMORE</p>
                         </div>
                       </div>
                     </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.3s">
+                      <div class="rounded shadow overflow-hidden team-card">
+                        <div class="position-relative">
+                          <img class="" src="images/malvone.jpg" alt="Vadim Malvone">
+                          <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                            <a class="btn btn-square mx-1" href="mailto:prima2025.general.chairs@gmail.com"><i class="bi bi-envelope"></i></a>
+                            <a class="btn btn-square mx-1" href="https://vadimmalvone.github.io/"><i class="bi bi-globe2"></i></a>
+                          </div>
+                        </div>
+                        <div class="text-center p-4 mt-3">
+                          <h5 class="fw-bold mb-0">Vadim Malvone</h5>
+                          <p class="mb-4">Télécom Paris</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
                 </div>
-                
-      </section>
+        
+                <div class="carousel-item mb-5">
+                  <div class="carousel-caption position-relative text-center">
+                    <h6>Program Chairs</h6>
+                  </div>
+                  <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.1s">
+                      <div class="rounded shadow overflow-hidden team-card">
+                        <div class="position-relative">
+                          <img class="" src="images/bergenti.jpg" alt="Federico Bergenti">
+                          <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                            <a class="btn btn-square mx-1" href="mailto:prima2025.program.chairs@gmail.com"><i class="bi bi-envelope"></i></a>
+                            <a class="btn btn-square mx-1" href="https://www.ailab.unipr.it/bergenti/"><i class="bi bi-globe2"></i></a>
+                          </div>
+                        </div>
+                        <div class="text-center p-4 mt-3">
+                          <h5 class="fw-bold mb-0">Federico Bergenti</h5>
+                          <p class="mb-4">Università di Parma</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.1s">
+                      <div class="rounded shadow overflow-hidden team-card">
+                        <div class="position-relative">
+                          <img class="" src="images/dima.jpg" alt="Catalin Dima">
+                          <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                            <a class="btn btn-square mx-1" href="mailto:prima2025.program.chairs@gmail.com"><i class="bi bi-envelope"></i></a>
+                            <a class="btn btn-square mx-1" href="https://lacl.u-pec.fr/dima/"><i class="bi bi-globe2"></i></a>
+                          </div>
+                        </div>
+                        <div class="text-center p-4 mt-3">
+                          <h5 class="fw-bold mb-0">Catalin Dima</h5>
+                          <p class="mb-4">Université Paris-Est Créteil</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="carousel-item mb-5">
+                  <div class="carousel-caption position-relative text-center">
+                    <h6>PhD Day Chairs</h6>
+                  </div>
+                  <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.1s">
+                      <div class="rounded shadow overflow-hidden team-card">
+                        <div class="position-relative">
+                          <img class="" src="images/ortiz.jpg" alt="James Ortiz">
+                          <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                            <a class="btn btn-square mx-1" href="mailto:prima2025.phdday.chairs@gmail.com"><i class="bi bi-envelope"></i></a>
+                            <a class="btn btn-square mx-1" href="https://scholar.google.com/citations?user=x5XHr_AAAAAJ&hl=en"><i class="bi bi-globe2"></i></a>
+                          </div>
+                        </div>
+                        <div class="text-center p-4 mt-3">
+                          <h5 class="fw-bold mb-0">James Ortiz</h5>
+                          <p class="mb-4">Télécom Paris</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.7s">
+                      <div class="rounded shadow overflow-hidden team-card">
+                        <div class="position-relative">
+                          <img class="" src="images/slavkovik.jpg" alt="Marija Slavkovik">
+                          <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                            <a class="btn btn-square mx-1" href="mailto:prima2025.phdday.chairs@gmail.com"><i class="bi bi-envelope"></i></a>
+                            <a class="btn btn-square mx-1" href="https://slavkovik.com/index.html"><i class="bi bi-globe2"></i></a>
+                          </div>
+                        </div>
+                        <div class="text-center p-4 mt-3">
+                          <h5 class="fw-bold mb-0">Marija Slavkovik</h5>
+                          <p class="mb-4">University of Bergen</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="carousel-item mb-5">
+                  <div class="carousel-caption position-relative text-center">
+                    <h6>Sponsorship Chairs</h6>
+                  </div>
+                  <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.7s">
+                      <div class="rounded shadow overflow-hidden team-card">
+                        <div class="position-relative">
+                          <img class="" src="images/burgio.jpg" alt="Paolo Burgio">
+                          <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                            <a class="btn btn-square mx-1" href="mailto:paolo.burgio@unimore.it"><i class="bi bi-envelope"></i></a>
+                            <a class="btn btn-square mx-1" href="https://hipert.unimore.it/people/paolob/"><i class="bi bi-globe2"></i></a>
+                          </div>
+                        </div>
+                        <div class="text-center p-4 mt-3">
+                          <h5 class="fw-bold mb-0">Paolo Burgio</h5>
+                          <p class="mb-4">UNIMORE</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.7s">
+                      <div class="rounded shadow overflow-hidden team-card">
+                        <div class="position-relative">
+                          <img class="" src="images/muzzini.jpg" alt="Filippo Muzzini">
+                          <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                            <a class="btn btn-square mx-1" href="mailto:filippo.muzzini@unimore.it"><i class="bi bi-envelope"></i></a>
+                            <a class="btn btn-square mx-1" href="https://personale.unimore.it/rubrica/dettaglio/fmuzzini"><i class="bi bi-globe2"></i></a>
+                          </div>
+                        </div>
+                        <div class="text-center p-4 mt-3">
+                          <h5 class="fw-bold mb-0">Filippo Muzzini</h5>
+                          <p class="mb-4">UNIMORE</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="carousel-item mb-5">
+                  <div class="carousel-caption position-relative text-center">
+                    <h6>Local Chairs</h6>
+                  </div>
+                  <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.7s">
+                      <div class="rounded shadow overflow-hidden team-card">
+                        <div class="position-relative">
+                          <img class="" src="images/cabri.png" alt="Giacomo Cabri">
+                          <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                            <a class="btn btn-square mx-1" href="mailto:prima2025.local.chairs@gmail.com"><i class="bi bi-envelope"></i></a>
+                            <a class="btn btn-square mx-1" href="https://personale.unimore.it/rubrica/dettaglio/gcabri"><i class="bi bi-globe2"></i></a>
+                          </div>
+                        </div>
+                        <div class="text-center p-4 mt-3">
+                          <h5 class="fw-bold mb-0">Giacomo Cabri</h5>
+                          <p class="mb-4">UNIMORE</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.7s">
+                      <div class="rounded shadow overflow-hidden team-card">
+                        <div class="position-relative">
+                          <img class="" src="images/monica.jpg" alt="Stefania Monica">
+                          <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                            <a class="btn btn-square mx-1" href="mailto:prima2025.local.chairs@gmail.com"><i class="bi bi-envelope"></i></a>
+                            <a class="btn btn-square mx-1" href="https://personale.unimore.it/rubrica/dettaglio/monica"><i class="bi bi-globe2"></i></a>
+                          </div>
+                        </div>
+                        <div class="text-center p-4 mt-3">
+                          <h5 class="fw-bold mb-0">Stefania Monica</h5>
+                          <p class="mb-4">UNIMORE</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item mb-5">
+                  <div class="carousel-caption position-relative text-center">
+                    <h6>Publicity Chair</h6>
+                  </div>
+                  <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.7s">
+                      <div class="rounded shadow overflow-hidden team-card">
+                        <div class="position-relative">
+                          <img class="" src="images/perlic.png" alt="Vladana Perlić">
+                        </div>
+                        <div class="text-center p-4 mt-3">
+                          <h5 class="fw-bold mb-0">Vladana Perlić</h5>
+                          <p class="mb-4">Télécom Paris</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </section>
 
       
-    <footer class="site-footer">
-      <section class="sponsor">
-        <div class="site-footer-top">
+      <section class="sponsor mb-5" id="sponsors">
+
             <div class="container">
                   <div class="row row-cols-1 row-cols-md-3 g-3">
                     <div class="col">
@@ -693,69 +866,97 @@
                       </div>
                     </div>
                   </div>
-        </div>
+                </div>
         </section>
 
-        <div class="container">
-            <div class="row">
-
-               
-
-                <div class="col-lg-8 col-md-6 col-12 mb-4 mb-lg-0">
-
-                    <!-- <h5 class="site-footer-title mb-3">Have a question?</h5> -->
-
-
-                    <p class="text-white d-flex">
-                        <!-- <a href="mailto:hello@company.com" class="site-footer-link">
-                            hello@prima2025.com
-                        </a> -->
-                    </p>
+        <footer class="site-footer pt-4">
+          <div class="container">
+            <div class="row justify-content-center text-center mx-auto">
+        
+              <!-- Venue Location -->
+              <div class="col-lg-4 col-md-6 col-12 mb-lg-0">
+                <h6 class="site-footer-title mb-2">PRIMA 2025</h6>
+                <p class="text-white mb-2 small">
+                  <strong>Dates:</strong><br>
+                  16–19th December 2025
+                </p>
+                <p class="text-white mb-2 small">
+                  <strong>Venue:</strong><br>
+                  Camera di Commercio di Modena – Sala Leonelli<br>
+                  Via Ganaceto, 134 – 41121 Modena, Italy
+                </p>
+                <div class="ratio ratio-16x9 rounded shadow-sm overflow-hidden mb-2" style="max-height: 110px;">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2780.390003136849!2d10.9266095!3d44.6509763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fef112f2f861f%3A0x2a4250a301d1e094!2sCamera%20di%20Commercio%20Industria%20Artigianato%20Agricoltura%20di%20Modena%20(Palazzo%20Molza)!5e0!3m2!1sit!2sit!4v1715000000000!5m2!1sit!2sit"
+                    style="border: 0; width: 100%; height: 100%; margin: 0;"
+                    allowfullscreen=""
+                    loading="lazy">
+                  </iframe>
                 </div>
-
-                <div class="col-lg-3 col-md-6 col-11 mb-4 mb-lg-0 mb-md-0">
-                    <h5 class="site-footer-title mb-3">Location</h5>
-
-                    <p class="text-white d-flex mt-3 mb-2">
-                        Modena, Italy</p>
-
-                    <!-- <a class="link-fx-1 color-contrast-higher mt-3" href="#">
-                        <span>Our Maps</span>
-                        <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
-                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="16" cy="16" r="15.5"></circle>
-                                <line x1="10" y1="18" x2="16" y2="12"></line>
-                                <line x1="16" y1="12" x2="22" y2="18"></line>
-                            </g>
-                        </svg>
-                    </a> -->
-                </div>
+              </div>
+              <!-- Contact Info -->
+              <div class="col-lg-4 col-md-6 col-12 mb-lg-0">
+                <h6 class="site-footer-title mb-2">Contact</h6>
+                <p class="text-white  mb-2 small">
+                  Email:
+                  <a href="mailto:prima2025@unimore.it" class="site-footer-link ms-2">prima2025.general.chairs@gmail.com</a>
+                </p>
+                <p class="text-white  small">
+                  LinkedIn:
+                  <a href="https://it.linkedin.com/company/prima-2025-international-conference-on-principles-and-practice-of-multi-agent-systems?trk=public_post_follow-view-profile" class="site-footer-link ms-2" target="_blank">
+                    <i class="bi bi-linkedin me-1"></i>#PRIMA2025
+                  </a>
+                </p>
+                <div class="text-center my-3">
+                  <a href="#sponsors" class="btn custom-btn small-btn">
+                    See Our Sponsors
+                  </a>
+                </div> 
+              </div>
+        
+              <!-- Quick Links -->
+              <div class="col-lg-4 col-md-6 col-12 mb-lg-0">
+                <h6 class="site-footer-title mb-2">Quick Links</h6>
+                <ul class="list-unstyled small">
+                  <li><a href="index.html#section_2" class="site-footer-link small">Call for Papers</a></li>
+                  <!-- <li><a href="index.html#section_3" class="site-footer-link small">Speakers</a></li> -->
+                  <li><a href="index.html#section_4" class="site-footer-link small">Important Dates</a></li>
+                  <li><a href="index.html#section_5" class="site-footer-link small">Organizers</a></li>
+                  <li><a href="modena.html" class="site-footer-link small">Discover Modena</a></li>
+                  <li><a href="venue.html" class="site-footer-link small">Venue</a></li>
+                  <li><a href="accommodation.html" class="site-footer-link small">Accommodation</a></li>
+                </ul>
+              </div>
+        
             </div>
-
-        </div>
-
-        <div class="site-footer-bottom">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-12 col-12 mt-5 text-center">
-                        <p class="copyright-text">Copyright © 2025 PRIMA</p>
-                    </div>
-
                 
-                </div>
             </div>
-        </div>
-    </footer>
+            </div>
+            <div class="site-footer-bottom mt-0 pt-2" style="padding-top: 0 !important; margin-top: 0 !important;">
+              <div class="container px-0">
+                <div class="row gx-0">
+                  <div class="col-12 text-center">
+                    <p class="copyright-text small mb-0">Copyright © 2025 PRIMA</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </footer>
+        
+        
 
    
 
     <!-- JAVASCRIPT FILES -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
     <script src="js/click-scroll.js"></script>
     <script src="js/custom.js"></script>
+
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  
 
 </body>
 
