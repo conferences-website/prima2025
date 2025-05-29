@@ -1407,3 +1407,10 @@ background: #ffd60a;
 .service-item {
   background-color: #ffffff !important;
 }
+
+.speaker-img {
+  transition: transform 0.3s ease;
+}
+.speaker-img:hover {
+  transform: scale(1.05);
+}
