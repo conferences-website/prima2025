@@ -14,7 +14,7 @@
   --dark-color:                   #1b1f3b;
   --p-color:                      #1b1f3b;
   --border-color:                 #7fffd4;
-  --link-hover-color:             #ff6b6b;
+  --link-hover-color:             #ffd60a;
   
   --h1-font-size:                 74px;
   --h2-font-size:                 46px;
@@ -109,7 +109,7 @@ button {
 
 a {
   display: inline-block;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   text-decoration: none;
 }
 
@@ -232,7 +232,7 @@ strong {
 }
 
 .tab-content {
-  background-color: var(--white-color);
+  background-color: #fff;
   border-radius: var(--border-radius-medium);
   padding: 45px;
 }
@@ -289,7 +289,7 @@ strong {
 -----------------------------------------*/
 .custom-btn {
   background: var(--custom-btn-bg-color);
-  border: 2px solid transparent;
+  border: none;
   border-radius: var(--border-radius-large);
   color: var(--white-color);
   font-size: var(--btn-font-size);
@@ -842,6 +842,46 @@ position: relative;
 .team-card:hover img {
   transform: scale(1.05); /* ingrandisce leggermente al passaggio */
 }
+
+/* Tablet (≤991px)*/
+@media (max-width: 991px) {
+  .organizers-section .team-card img {
+    max-width: 250px;
+    margin: 0 auto; /* centra immagine */
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .organizers-section .team-card {
+    max-width: 200px !important;
+    margin: 0 auto 10px !important;
+    padding: 8px !important;
+  }
+
+  .organizers-section .team-card img {
+    max-width: 140px !important;
+    margin: 0 auto !important;
+    display: block;
+  }
+
+  /* Riduzione spazio tra immagine e testo */
+  .organizers-section .team-card .text-center {
+    padding: 4px 0 !important;
+    margin-top: 4px !important;
+  }
+
+  .organizers-section .team-card h5 {
+    font-size: 1rem !important;
+    margin: 2px 0 !important;
+  }
+
+  .organizers-section .team-card p {
+    font-size: 0.8rem !important;
+    margin: 0 !important;
+  }
+}
+
 
 
 .carousel-control-prev,
@@ -1414,3 +1454,256 @@ background: #ffd60a;
 .speaker-img:hover {
   transform: scale(1.05);
 }
+
+.speaker-img-wrapper {
+  width: 100%;
+  max-width: 350px; /* Più grande su desktop */
+  aspect-ratio: 1/1; /* Quadrato perfetto */
+  overflow: hidden;
+  border-radius: 12px;
+  border: 4px solid #ffd60a;
+  transition: transform 0.3s ease;
+  margin: 0 auto; /* Centra l'immagine */
+}
+
+/* Immagine adattata */
+.speaker-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Effetto hover elegante */
+.speaker-img-wrapper:hover {
+  transform: scale(1.05);
+}
+
+/* Spaziatura pulsante */
+.small-btn {
+  padding: 6px 16px;
+  font-size: 0.9rem;
+}
+
+/* Layout responsive */
+@media (max-width: 768px) {
+  .speaker-img-wrapper {
+    max-width: 200px;
+  }
+}
+
+
+@media (max-width: 991px) {
+  #nav-topics ul {
+    display: none;
+  }
+}
+
+
+/* Bottoni Giorni */
+
+.program-section .tab-content {
+  background: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+#scheduleTabs .custom-btn {
+  background: var(--custom-btn-bg-color);
+  color: #fff;
+  border-radius: var(--border-radius-large);
+  padding: 10px 20px;
+  font-weight: var(--font-weight-bold);
+  transition: all 0.3s;
+}
+
+#scheduleTabs .custom-btn:hover,
+#scheduleTabs .custom-btn.active {
+  background: var(--custom-btn-bg-hover-color);
+  color: #1b1f3b;
+}
+
+/* Card base */
+.schedule-card {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.schedule-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Card speciale Invited Speaker */
+.schedule-card.invited {
+  background: #ff6b6b;
+  color: #1b1f3b;
+  border: none;
+}
+
+.schedule-card.invited .session-title,
+.schedule-card.invited .session-speaker,
+.schedule-card.invited .session-time {
+  color: #1b1f3b;
+  font-weight: 600;
+}
+
+/* Testi */
+.session-time {
+  font-size: 0.9rem;
+  color: #888;
+  font-weight: 500;
+}
+
+.session-title {
+  color: #1b1f3b;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.session-speaker {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.program-section .nav {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Nasconde scrollbar su Firefox */
+}
+
+.program-section .nav::-webkit-scrollbar {
+  display: none; /* Nasconde scrollbar su Chrome/Safari */
+}
+
+@media (max-width: 576px) {
+  .schedule-section .nav .custom-btn {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Bottoni Giorni */
+.schedule-tab {
+  background: var(--custom-btn-bg-color);
+  border: none;
+  border-radius: var(--border-radius-large);
+  color: var(--white-color);
+  font-size: var(--btn-font-size);
+  font-weight: var(--font-weight-bold);
+  line-height: normal;
+  transition: all 0.3s;
+  padding: 10px 20px;
+  white-space: nowrap; /* Evita che i bottoni vadano a capo */
+}
+
+.schedule-tab:hover,
+.schedule-tab.active {
+  background: var(--custom-btn-bg-hover-color);
+  color: #1b1f3b;
+}
+
+/* Layout delle card */
+.schedule-card {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 180px; /* Altezza uniforme per tutte */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.schedule-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Imposta le colonne alla stessa altezza */
+.row.g-4 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+/* Le card occupano tutta l'altezza della colonna */
+.schedule-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+/* Testi */
+.session-time {
+  font-size: 0.9rem;
+  color: #888;
+  font-weight: 500;
+}
+
+.session-title {
+  color: #1b1f3b;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.session-speaker {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Card Invited Speaker */
+.schedule-card.invited {
+  background: #ff6b6b;
+  color: #1b1f3b;
+  border: none;
+}
+
+.schedule-card.invited .session-title,
+.schedule-card.invited .session-speaker,
+.schedule-card.invited .session-time {
+  color: #1b1f3b;
+  font-weight: 600;
+}
+
+/* Icona per Invited Speaker */
+.invited-icon {
+  width: 40px;  /* più grande */
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.schedule-card.invited .d-flex.align-items-center {
+  align-items: center;
+  gap: 10px;
+}
+
+/* Responsive: bottoni centrati e uniformi */
+@media (max-width: 768px) {
+  .nav.justify-content-center {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .schedule-tab {
+    width: 45%;
+    text-align: center;
+  }
+}
+
+
+.schedule-card {
+  border-left: 4px solid #ffd60a;
+  padding-left: 15px;
+}
+
+
