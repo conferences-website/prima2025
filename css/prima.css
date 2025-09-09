@@ -1025,7 +1025,8 @@ SPONSOR
     inset 0 2px 4px rgba(255, 255, 255, 0.05);
   border: 1px solid #b4c2cc;
   border-radius: 0 0 0.75rem 0.75rem;
-  color: #1b1f3b; }
+  color: #1b1f3b; /* blu scuro coerente con il tema PRIMA */
+}
 
 @keyframes platinum-shine {
   0% {
