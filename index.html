@@ -595,21 +595,53 @@ He has served as co-chair of numerous events in the AI field, including EUMAS 20
       </div>
       <div class="modal-body">
         <p><strong>Affiliation:</strong> Imperial College London, UK </p>
-        <p><strong>Talk Title:</strong> <em>TBA</em></p>
+        <p><strong>Talk Title:</strong> <em>Towards verifying neural-symbolic multi-agent systems</em></p>
         <p><strong><i class="bi bi-calendar-event me-1"></i>Date & Time:</strong> TBA</p>
 
         <hr>
 
         <p class="small"><strong>Abstract:</strong></p>
         <p class="small">
-        TBA  
+        A challenge in the deployment of multi-agent systems (MAS)
+remains the inherent difficulty in confidently predicting their
+run-time behaviour. Over the past twenty years, increasingly scalable
+verification methods, including model checking and parameterised
+verification, have enabled the validation of several classes of MAS
+against AI-based specifications, and several MAS applications in
+services, robotics, security, and beyond.
+Yet, a new class of agents is emerging in applications. Differently
+from traditional MAS, which are typically directly programmed (and
+less often purely neural), they combine both connectionist and
+symbolic aspects. We will refer to these as neural-symbolic MAS. These
+agents include a neural layer implementing their perception function
+and symbolic or control-based layers realising decision making and
+planning. Implementations of neural-symbolic agents permeate many
+present and forthcoming AI applications, including autonomous vehicles
+and robotics. Due to the neural components, as well as their heterogeneity, verifying the behaviours of neural-symbolic MAS is particularly challenging. Yet, I will argue that, given the safety-critical applications they are used in, it is important we develop methods and tools to address their formal verification.
+In this talk I will share some of the contributions on this topic
+developed in our Lab at Imperial College London. I will begin by describing traditional approaches for the verification of symbolic MAS, and parameterised verification to address arbitrary collections of agents such as swarms. I will then summarise our present efforts on verification of neural perception systems, including MILP-based approaches, linear relaxations, and symbolic interval propagation, introduce our resulting toolkits, Venus and Verinet, and exemplify their use.
+This will lead us to existing methods for closed-loop, neural-symbolic
+MAS. In this context, I will share existing results that enable us to
+perform reachability analysis, and verify systems against bounded
+temporal specifications and ATL.
+I will conclude by highlighting the challenges that in my view lie ahead.   
         </p>
 
         <hr>
 
         <p class="small"><strong>Biography:</strong></p>
         <p class="small">
-         TBA
+         Alessio Lomuscio (<a href="http://www.doc.ic.ac.uk/~alessio">http://www.doc.ic.ac.uk/~alessio</a>) is Professor
+of Safe Artificial Intelligence in the Department of Computing at
+Imperial College London (UK), where he leads the Safe AI Lab (http://sail.doc.ic.ac.uk/). He is a Distinguished ACM member, a
+Fellow of the European Association of Artificial Intelligence and
+currently holds a Royal Academy of Engineering Chair in Emerging
+Technologies. He was a founding co-PI for the UKRI Doctoral Training Centre in Safe and Trusted Artificial Intelligence.
+
+Alessio's research interests concern the development of formal
+verification methods for artificial intelligence.  Since 2000 he has
+worked on the development of formal methods for the verification of
+autonomous systems and multi-agent systems. To this end, together with colleagues he has put forward several methods based on model checking and various forms abstraction to verify AI systems, including robotic swarms, against AI-based specifications. He is presently focusing on the development of methods to ascertain the correctness of AI systems based on deep neural networks.
         </p>
       </div>
     </div>
