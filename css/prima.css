@@ -299,6 +299,11 @@ strong {
   padding: 10px 20px;
 }
 
+.big-btn {
+  padding: 1rem 2rem;   
+  font-size: 1.5rem;   
+}
+
 .custom-btn:hover {
   background: var(--custom-btn-bg-hover-color);
   color: #1b1f3b;
@@ -351,7 +356,7 @@ strong {
 }
 
 /*---------------------------------------
-  NAVIGATION              
+  NAVBAR           
 -----------------------------------------*/
 .sticky-wrapper {
   position: absolute;
@@ -882,8 +887,6 @@ position: relative;
   }
 }
 
-
-
 .carousel-control-prev,
 .carousel-control-next {
   z-index: 10; /* sopra gli altri elementi */
@@ -901,7 +904,6 @@ position: relative;
   background-position: center;
 }
 
-/* Posizione più interna se su dispositivi piccoli */
 @media (max-width: 768px) {
   .carousel-control-prev {
     left: 10px;
@@ -955,6 +957,18 @@ SPONSOR
 
 .sponsor .sponsor-wrapper {
   transition: all .3s;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.sponsor .sponsor-wrapper .card-footer {
+  margin-top: auto;
+}
+
+.sponsor .sponsor-wrapper .card-body {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .sponsor .sponsor-wrapper img {
@@ -968,12 +982,12 @@ SPONSOR
   opacity: 1;
 }
 
-
 .flexible {
-  flex-grow: 1;
-  width: 100%;
-    height: 150px; /* o qualunque altezza desideri */
-    object-fit: contain;
+  max-width: 100%;
+  height: 120px; /* ridotto per i dispositivi più piccoli */
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 
 .bg-platinum {
@@ -1070,333 +1084,21 @@ SPONSOR
   }
 }
 
-/* Cards */
-.postcard {
-  flex-wrap: wrap;
-  display: flex;
-  
-  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
-  border-radius: 10px;
-  margin: 0 0 2rem 0;
-  overflow: hidden;
-  position: relative;
-  color: #ffffff;
-
-	&.dark {
-		background-color: #18151f;
-	}
-	&.light {
-		background-color: #e1e5ea;
-	}
-	
-	.t-dark {
-		color: #18151f;
-	}
-	
-  a {
-    color: inherit;
-  }
-	
-	h1,	.h1 {
-		margin-bottom: 0.5rem;
-		font-weight: 500;
-		line-height: 1.2;
-	}
-	
-	.small {
-		font-size: 80%;
-	}
-
-  .postcard__title {
-    font-size: 1.75rem;
+@media (min-width: 768px) and (max-width: 1199px) {
+  .sponsor .sponsor-inkind {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-evenly;
   }
 
-  .postcard__img {
-    max-height: 180px;
-    width: 100%;
-    object-fit: cover;
-    position: relative;
-  }
-
-  .postcard__img_link {
-    display: contents;
-  }
-
-  .postcard__bar {
-    width: 50px;
-    height: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    background-color: #424242;
-    transition: width 0.2s ease;
-  }
-
-  .postcard__text {
-    padding: 1.5rem;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .postcard__preview-txt {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: justify;
-    height: 100%;
-  }
-
-  .postcard__tagbox {
-    display: flex;
-    flex-flow: row wrap;
-    font-size: 14px;
-    margin: 20px 0 0 0;
-		padding: 0;
-    justify-content: center;
-
-    .tag__item {
-      display: inline-block;
-      background: rgba(83, 83, 83, 0.4);
-      border-radius: 3px;
-      padding: 2.5px 10px;
-      margin: 0 5px 5px 0;
-      cursor: default;
-      user-select: none;
-      transition: background-color 0.3s;
-
-      &:hover {
-        background-color: rgba(83, 83, 83, 0.8);
-      }
-    }
-  }
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(-70deg, #424242, transparent 50%);
-    opacity: 1;
-    border-radius: 10px;
-  }
-
-  &:hover .postcard__bar {
-    width: 100px;
+  .sponsor .sponsor-inkind a img {
+    max-width: 80px;
+    height: auto;
   }
 }
 
-@media screen and (min-width: 769px) {
-  .postcard {
-    flex-wrap: inherit;
 
-    .postcard__title {
-      font-size: 2rem;
-    }
 
-    .postcard__tagbox {
-      justify-content: start;
-    }
-
-    .postcard__img {
-      max-width: 300px;
-      max-height: 100%;
-      transition: transform 0.3s ease;
-    }
-
-    .postcard__text {
-      padding: 3rem;
-      width: 100%;
-    }
-
-    .media.postcard__text:before {
-      content: "";
-      position: absolute;
-      display: block;
-      background: #18151f;
-      top: -20%;
-      height: 130%;
-      width: 55px;
-    }
-
-    &:hover .postcard__img {
-      transform: none; /*scale(1.1);*/
-    }
-
-    &:nth-child(2n+1) {
-      flex-direction: row;
-    }
-
-    &:nth-child(2n+0) {
-      flex-direction: row-reverse;
-    }
-
-    &:nth-child(2n+1) .postcard__text::before {
-      left: -12px !important;
-      transform: rotate(4deg);
-    }
-
-    &:nth-child(2n+0) .postcard__text::before {
-      right: -12px !important;
-      transform: rotate(-4deg);
-    }
-  }
-}
-@media screen and (min-width: 1024px){
-		.postcard__text {
-      padding: 2rem 3.5rem;
-    }
-		
-		.postcard__text:before {
-      content: "";
-      position: absolute;
-      display: block;
-      
-      top: -20%;
-      height: 130%;
-      width: 55px;
-    }
-	
-  .postcard.dark {
-		.postcard__text:before {
-			background-color: #18151f;
-		}
-  }
-	.postcard.light {
-		.postcard__text:before {
-			background-color: #e1e5ea;
-		}
-  }
-}
-
-/* COLORS */
-.postcard .postcard__tagbox .green.play:hover {
-	background: $main-green;
-	color: black;
-}
-.green .postcard__title:hover {
-	color: $main-green;
-}
-.green .postcard__bar {
-	background-color: $main-green;
-}
-.green::before {
-	background-image: linear-gradient(
-		-30deg,
-		$main-green-rgb-015,
-		transparent 50%
-	);
-}
-.green:nth-child(2n)::before {
-	background-image: linear-gradient(30deg, $main-green-rgb-015, transparent 50%);
-}
-
-.postcard .postcard__tagbox .blue.play:hover {
-	background: $main-blue;
-}
-.blue .postcard__title:hover {
-	color: $main-blue;
-}
-.blue .postcard__bar {
-	background-color: $main-blue;
-}
-.blue::before {
-	background-image: linear-gradient(-30deg, $main-blue-rgb-015, transparent 50%);
-}
-.blue:nth-child(2n)::before {
-	background-image: linear-gradient(30deg, $main-blue-rgb-015, transparent 50%);
-}
-
-.postcard .postcard__tagbox .red.play:hover {
-	background: $main-red;
-}
-.red .postcard__title:hover {
-	color: $main-red;
-}
-.red .postcard__bar {
-	background-color: $main-red;
-}
-.red::before {
-	background-image: linear-gradient(-30deg, $main-red-rgb-015, transparent 50%);
-}
-.red:nth-child(2n)::before {
-	background-image: linear-gradient(30deg, $main-red-rgb-015, transparent 50%);
-}
-
-.postcard .postcard__tagbox .yellow.play:hover {
-	background: $main-yellow;
-	color: black;
-}
-.yellow .postcard__title:hover {
-	color: $main-yellow;
-}
-.yellow .postcard__bar {
-	background-color: $main-yellow;
-}
-.yellow::before {
-	background-image: linear-gradient(
-		-30deg,
-		$main-yellow-rgb-015,
-		transparent 50%
-	);
-}
-.yellow:nth-child(2n)::before {
-	background-image: linear-gradient(
-		30deg,
-		$main-yellow-rgb-015,
-		transparent 50%
-	);
-}
-
-@media screen and (min-width: 769px) {
-	.green::before {
-		background-image: linear-gradient(
-			-80deg,
-			$main-green-rgb-015,
-			transparent 50%
-		);
-	}
-	.green:nth-child(2n)::before {
-		background-image: linear-gradient(
-			80deg,
-			$main-green-rgb-015,
-			transparent 50%
-		);
-	}
-
-	.blue::before {
-		background-image: linear-gradient(
-			-80deg,
-			$main-blue-rgb-015,
-			transparent 50%
-		);
-	}
-	.blue:nth-child(2n)::before {
-		background-image: linear-gradient(80deg, $main-blue-rgb-015, transparent 50%);
-	}
-
-	.red::before {
-		background-image: linear-gradient(-80deg, $main-red-rgb-015, transparent 50%);
-	}
-	.red:nth-child(2n)::before {
-		background-image: linear-gradient(80deg, $main-red-rgb-015, transparent 50%);
-	}
-	
-	.yellow::before {
-		background-image: linear-gradient(
-			-80deg,
-			$main-yellow-rgb-015,
-			transparent 50%
-		);
-	}
-	.yellow:nth-child(2n)::before {
-		background-image: linear-gradient(
-			80deg,
-			$main-yellow-rgb-015,
-			transparent 50%
-		);
-	}
-}
 
 
 body.page-info .sticky-wrapper {
@@ -1412,7 +1114,10 @@ body.page-info .navbar {
   margin-bottom: 0 !important;
 }
 
-/*** Service ***/
+
+/*---------------------------------------
+  SERVICE              
+-----------------------------------------*/
 .service-item {
   box-shadow: 0 0 45px rgba(0, 0, 0, .08);
 }
@@ -1479,6 +1184,11 @@ background: #ffd60a;
   background-color: #ffffff !important;
 }
 
+
+/*---------------------------------------
+  SPEAKER              
+-----------------------------------------*/
+
 .speaker-img {
   transition: transform 0.3s ease;
 }
@@ -1488,16 +1198,15 @@ background: #ffd60a;
 
 .speaker-img-wrapper {
   width: 100%;
-  max-width: 350px; /* Più grande su desktop */
-  aspect-ratio: 1/1; /* Quadrato perfetto */
+  max-width: 350px; 
+  aspect-ratio: 1/1; 
   overflow: hidden;
   border-radius: 12px;
   border: 4px solid #ffd60a;
   transition: transform 0.3s ease;
-  margin: 0 auto; /* Centra l'immagine */
+  margin: 0 auto; 
 }
 
-/* Immagine adattata */
 .speaker-img {
   width: 100%;
   height: 100%;
@@ -1505,18 +1214,16 @@ background: #ffd60a;
   display: block;
 }
 
-/* Effetto hover elegante */
+
 .speaker-img-wrapper:hover {
   transform: scale(1.05);
 }
 
-/* Spaziatura pulsante */
 .small-btn {
   padding: 6px 16px;
   font-size: 0.9rem;
 }
 
-/* Layout responsive */
 @media (max-width: 768px) {
   .speaker-img-wrapper {
     max-width: 200px;
@@ -1531,7 +1238,10 @@ background: #ffd60a;
 }
 
 
-/* Bottoni Giorni */
+
+/*---------------------------------------
+  PROGRAM            
+-----------------------------------------*/
 
 .program-section .tab-content {
   background: none !important;
@@ -1555,7 +1265,7 @@ background: #ffd60a;
   color: #1b1f3b;
 }
 
-/* Card base */
+/* Card */
 .schedule-card {
   background: #fff;
   border-radius: 12px;
@@ -1568,7 +1278,7 @@ background: #ffd60a;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
-/* Card speciale Invited Speaker */
+/* Card Invited Speaker */
 .schedule-card.invited {
   background: #ff6b6b;
   color: #1b1f3b;
@@ -1582,7 +1292,6 @@ background: #ffd60a;
   font-weight: 600;
 }
 
-/* Testi */
 .session-time {
   font-size: 0.9rem;
   color: #888;
@@ -1604,11 +1313,11 @@ background: #ffd60a;
   flex-wrap: nowrap;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Nasconde scrollbar su Firefox */
+  scrollbar-width: none; 
 }
 
 .program-section .nav::-webkit-scrollbar {
-  display: none; /* Nasconde scrollbar su Chrome/Safari */
+  display: none; 
 }
 
 @media (max-width: 576px) {
@@ -1618,7 +1327,6 @@ background: #ffd60a;
   }
 }
 
-/* Bottoni Giorni */
 .schedule-tab {
   background: var(--custom-btn-bg-color);
   border: none;
@@ -1629,7 +1337,7 @@ background: #ffd60a;
   line-height: normal;
   transition: all 0.3s;
   padding: 10px 20px;
-  white-space: nowrap; /* Evita che i bottoni vadano a capo */
+  white-space: nowrap; 
 }
 
 .schedule-tab:hover,
@@ -1638,13 +1346,13 @@ background: #ffd60a;
   color: #1b1f3b;
 }
 
-/* Layout delle card */
+
 .schedule-card {
   background: #fff;
   border-radius: 12px;
   border: 1px solid #eee;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  min-height: 180px; /* Altezza uniforme per tutte */
+  min-height: 180px; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1655,14 +1363,12 @@ background: #ffd60a;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
-/* Imposta le colonne alla stessa altezza */
 .row.g-4 {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
 }
 
-/* Le card occupano tutta l'altezza della colonna */
 .schedule-card {
   height: 100%;
   display: flex;
@@ -1670,8 +1376,6 @@ background: #ffd60a;
   justify-content: center;
 }
 
-
-/* Testi */
 .session-time {
   font-size: 0.9rem;
   color: #888;
@@ -1704,7 +1408,7 @@ background: #ffd60a;
   font-weight: 600;
 }
 
-/* Icona per Invited Speaker */
+/* Icon Invited Speaker */
 .invited-icon {
   width: 40px;  /* più grande */
   height: 40px;
@@ -1718,7 +1422,6 @@ background: #ffd60a;
   gap: 10px;
 }
 
-/* Responsive: bottoni centrati e uniformi */
 @media (max-width: 768px) {
   .nav.justify-content-center {
     flex-wrap: wrap;
@@ -1737,4 +1440,77 @@ background: #ffd60a;
   padding-left: 15px;
 }
 
+
+
+/*---------------------------------------
+  SCHEDULE             
+-----------------------------------------*/
+.schedule-section {
+  background-color: #f5f5f5;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.schedule-section .card {
+  border-radius: 1rem;
+  background: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.schedule-section .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-section .card-header {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* List of events */
+.schedule-section .card-body ul {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.schedule-section .card-body ul li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid rgba(27, 31, 59, 0.08);
+  transition: background 0.2s;
+}
+
+.schedule-section .card-body ul li:last-child {
+  border-bottom: none;
+}
+
+ li.social-events {
+  background-color: #ffd60a;
+  color: #1b1f3b;
+}
+
+li.invited-speakers {
+  background-color: #ff6b6b;
+  color: #fff;
+}
+
+.container h1,
+.page-content h1 {
+  padding-top: 40px;
+}
+
+/* SOLO per iPad Pro in landscape */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+  .container h1,
+  .page-content h1 {
+    padding-top: 140px;
+  }
+}
 
