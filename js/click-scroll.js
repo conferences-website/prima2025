@@ -1,37 +1,64 @@
-//jquery-click-scroll
-//by syamsul'isul' Arifin
+$(document).ready(function () {
+    var $nav = $('.navbar');
+    var $links = $('.click-scroll'); 
+    var $collapse = $('.navbar-collapse');
 
-var sectionArray = [2, 3, 4, 5];
+    // Funzione scroll con offset della navbar
+    function scrollToTarget($target) {
+        if ($target.length) {
+            var offsetClick = $target.offset().top - $nav.outerHeight();
+            $('html, body').animate({ scrollTop: offsetClick }, 300);
+        }
+    }
 
-$.each(sectionArray, function(index, value){
-          
-     $(document).scroll(function(){
-         var offsetSection = $('#' + 'section_' + value).offset().top - 83;
-         var docScroll = $(document).scrollTop();
-         var docScroll1 = docScroll + 1;
-         
-        
-         if ( docScroll1 >= offsetSection ){
-             $('.navbar-nav .nav-item .nav-link').removeClass('active');
-             $('.navbar-nav .nav-item .nav-link:link').addClass('inactive');  
-             $('.navbar-nav .nav-item .nav-link').eq(index).addClass('active');
-             $('.navbar-nav .nav-item .nav-link').eq(index).removeClass('inactive');
-         }
-         
-     });
-    
-    $('.click-scroll').eq(index).click(function(e){
-        var offsetClick = $('#' + 'section_' + value).offset().top - 83;
+    // Gestione click sui link
+    $links.on('click', function (e) {
         e.preventDefault();
-        $('html, body').animate({
-            'scrollTop':offsetClick
-        }, 300)
-    });
-    
-});
+        var href = $(this).attr('href');
+        var $target = $(href);
 
-$(document).ready(function(){
-    $('.navbar-nav .nav-item .nav-link:link').addClass('inactive');    
-    $('.navbar-nav .nav-item .nav-link').eq(0).addClass('active');
-    $('.navbar-nav .nav-item .nav-link:link').eq(0).removeClass('inactive');
+        if (!$target.length) return;
+
+        // Aggiorna stato attivo
+        $links.removeClass('active').addClass('inactive');
+        $(this).addClass('active').removeClass('inactive');
+
+        // 🔑 Fix per i dropdown su mobile: chiudiamo subito il menu aperto
+        if ($(this).hasClass('dropdown-item')) {
+            $('.dropdown-menu.show').removeClass('show');
+        }
+
+        if ($collapse.hasClass('show')) {
+            // MOBILE: chiudi navbar e poi scrolla
+            $collapse.one('hidden.bs.collapse', function () {
+                scrollToTarget($target);
+            }).collapse('hide');
+        } else {
+            // DESKTOP
+            scrollToTarget($target);
+        }
+    });
+
+    // Evidenziazione attiva durante lo scroll
+    $(document).on('scroll', function () {
+        var scrollPos = $(document).scrollTop() + $nav.outerHeight() + 10;
+
+        $links.each(function () {
+            var href = $(this).attr('href');
+            var $target = $(href);
+            if ($target.length) {
+                var top = $target.offset().top;
+                var bottom = top + $target.outerHeight();
+
+                if (scrollPos >= top && scrollPos < bottom) {
+                    $links.removeClass('active').addClass('inactive');
+                    $(this).addClass('active').removeClass('inactive');
+                }
+            }
+        });
+    });
+
+    // Stato iniziale
+    $links.addClass('inactive');
+    $links.first().addClass('active').removeClass('inactive');
 });
