@@ -1555,3 +1555,45 @@ li.invited-speakers {
   box-shadow: none !important;
   outline: none !important;
 }
+
+
+
+
+  .paper-card {
+    transition: all 0.3s ease;
+    border-left: 4px solid #ffd60a; /* giallo PRIMA */
+  }
+
+  .paper-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+
+   #paperSearch {
+    border-radius: 50px;
+    padding-left: 20px;
+
+  }
+
+  @media (max-width: 768px) {
+    /* Su mobile, pulsanti sopra e ricerca sotto */
+    .d-flex.flex-column.flex-md-row {
+      align-items: stretch !important;
+    }
+    #paperSearch {
+      width: 100%;
+    }
+  }
+ 
+  #paperSearch:hover {
+    border-color:#ff6b6b;
+  }
+
+.small-badge {
+  font-size: 0.65em;         /* testo più piccolo */
+  padding: 0.15em 0.45em;    /* meno padding */
+  border-radius: 8px;
+  vertical-align: middle;
+}
+
+
