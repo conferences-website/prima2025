@@ -1244,6 +1244,10 @@ background: #ffd60a;
   PROGRAM            
 -----------------------------------------*/
 
+/*---------------------------------------
+  PROGRAM SECTION
+-----------------------------------------*/
+
 .program-section .tab-content {
   background: none !important;
   box-shadow: none !important;
@@ -1251,13 +1255,17 @@ background: #ffd60a;
   border: none !important;
 }
 
+/*---------------------------------------
+  NAV TABS (Days)
+-----------------------------------------*/
+
 #scheduleTabs .custom-btn {
   background: var(--custom-btn-bg-color);
   color: #fff;
   border-radius: var(--border-radius-large);
   padding: 10px 20px;
   font-weight: var(--font-weight-bold);
-  transition: all 0.3s;
+  transition: all 0.3s ease;
 }
 
 #scheduleTabs .custom-btn:hover,
@@ -1266,161 +1274,15 @@ background: #ffd60a;
   color: #1b1f3b;
 }
 
-/* Card */
-.schedule-card {
-  background: #fff;
-  border-radius: 12px;
-  border: 1px solid #eee;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.schedule-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-}
-
-/* Card Invited Speaker */
-.schedule-card.invited {
-  background: #ff6b6b;
-  color: #1b1f3b;
-  border: none;
-}
-
-.schedule-card.invited .session-title,
-.schedule-card.invited .session-speaker,
-.schedule-card.invited .session-time {
-  color: #1b1f3b;
-  font-weight: 600;
-}
-
-.session-time {
-  font-size: 0.9rem;
-  color: #888;
-  font-weight: 500;
-}
-
-.session-title {
-  color: #1b1f3b;
-  font-size: 1.1rem;
-  font-weight: 700;
-}
-
-.session-speaker {
-  color: #555;
-  font-size: 0.95rem;
-}
-
 .program-section .nav {
   flex-wrap: nowrap;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; 
+  scrollbar-width: none;
 }
 
 .program-section .nav::-webkit-scrollbar {
-  display: none; 
-}
-
-@media (max-width: 576px) {
-  .schedule-section .nav .custom-btn {
-    padding: 8px 12px;
-    font-size: 0.85rem;
-  }
-}
-
-.schedule-tab {
-  background: var(--custom-btn-bg-color);
-  border: none;
-  border-radius: var(--border-radius-large);
-  color: var(--white-color);
-  font-size: var(--btn-font-size);
-  font-weight: var(--font-weight-bold);
-  line-height: normal;
-  transition: all 0.3s;
-  padding: 10px 20px;
-  white-space: nowrap; 
-}
-
-.schedule-tab:hover,
-.schedule-tab.active {
-  background: var(--custom-btn-bg-hover-color);
-  color: #1b1f3b;
-}
-
-
-.schedule-card {
-  background: #fff;
-  border-radius: 12px;
-  border: 1px solid #eee;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  min-height: 180px; 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.schedule-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-}
-
-.row.g-4 {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-}
-
-.schedule-card {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.session-time {
-  font-size: 0.9rem;
-  color: #888;
-  font-weight: 500;
-}
-
-.session-title {
-  color: #1b1f3b;
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.session-speaker {
-  color: #555;
-  font-size: 0.95rem;
-}
-
-/* Card Invited Speaker */
-.schedule-card.invited {
-  background: #ff6b6b;
-  color: #1b1f3b;
-  border: none;
-}
-
-.schedule-card.invited .session-title,
-.schedule-card.invited .session-speaker,
-.schedule-card.invited .session-time {
-  color: #1b1f3b;
-  font-weight: 600;
-}
-
-/* Icon Invited Speaker */
-.invited-icon {
-  width: 40px;  /* più grande */
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 10px;
-}
-
-.schedule-card.invited .d-flex.align-items-center {
-  align-items: center;
-  gap: 10px;
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -1429,17 +1291,245 @@ background: #ffd60a;
     gap: 10px;
   }
 
-  .schedule-tab {
-    width: 45%;
-    text-align: center;
+  #scheduleTabs .custom-btn {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+/*---------------------------------------
+  SINGLE COLUMN PROGRAM (time – title – authors)
+  + SESSION CHAIR
+-----------------------------------------*/
+
+.schedule-session {
+  background: #fff;
+  border-left: 6px solid #ffd60a;
+  border-radius: 12px;
+  padding: 20px 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.schedule-session:hover {
+  transform: scale(1.01);
+}
+
+.schedule-session-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1b1f3b;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.session-chair {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1b1f3b;
+  font-style: italic;
+  margin-left: 10px;
+}
+
+/* Paper entries */
+.schedule-item {
+  display: grid;
+  grid-template-columns: 140px 1.25fr 1fr;
+  align-items: start;
+  gap: 15px;
+  padding: 8px 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+.schedule-item:last-child {
+  border-bottom: none;
+}
+
+.schedule-item .time {
+  font-weight: 600;
+  color: #555;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.schedule-item .paper-title {
+  color: #1b1f3b;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.schedule-item .authors {
+  color: #1b1f3b;
+  font-size: 0.95rem;
+  font-style: italic;
+  text-align: right;
+}
+
+/*---------------------------------------
+  INVITED SPEAKER CARD (Pink Style)
+-----------------------------------------*/
+
+/* Invited Speaker Card */
+.schedule-card.invited {
+  background: #ff6b6b;
+  color: #fff;
+  border-radius: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.schedule-card.invited:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Speaker section */
+.invited-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.invited-badge {
+  background: #fff;
+  color: #1b1f3b;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 6px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.speaker-name {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.speaker-affiliation {
+  font-size: 0.9rem;
+  color: #fff;
+  opacity: 0.9;
+}
+
+/* Time and title row */
+.schedule-card.invited .session-time {
+  font-weight: 600;
+  color: #fff;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  min-width: 130px;
+  margin-right: 10px;
+}
+
+.invited-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.4;
+  flex: 1;
+}
+
+.schedule-card.invited.erc {
+  background: #fff !important;
+  border-left: 6px solid #ff6b6b !important;
+}
+
+.schedule-card.invited.erc * {
+  color: #1b1f3b !important;
+}
+
+.erc-badge {
+  background: #ff6b6b;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 6px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .d-flex.justify-content-between.align-items-start.flex-wrap {
+    flex-direction: column;
+  }
+
+  .invited-title {
+    font-size: 1.1rem;
+    margin-left: 0;
+  }
+
+  .session-time {
+    margin-bottom: 0.3rem;
   }
 }
 
 
-.schedule-card {
-  border-left: 4px solid #ffd60a;
-  padding-left: 15px;
+.schedule-session.break {
+  border-left: 6px solid #1b1f3b; 
+  background: #fff;
 }
+
+.schedule-session.break .schedule-session-title {
+  color: #1b1f3b;
+  border-bottom: 1px solid rgba(27, 31, 59, 0.2);
+}
+
+.schedule-session.break .paper-title {
+  color: #1b1f3b;
+  font-weight: 500;
+}
+
+.schedule-session.break .authors {
+  color: #1b1f3b;
+  opacity: 0.8;
+}
+
+
+.schedule-info {
+  font-size: 1rem;
+  margin: -10px auto 25px;
+  line-height: 1.5;
+}
+
+
+
+/*---------------------------------------
+  RESPONSIVE
+-----------------------------------------*/
+
+@media (max-width: 768px) {
+  .schedule-item {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .schedule-item .time {
+    color: #888;
+    font-size: 0.85rem;
+  }
+
+  .schedule-item .authors {
+    text-align: left;
+  }
+
+  .session-chair {
+    display: block;
+    margin-top: 4px;
+  }
+}
+
 
 
 

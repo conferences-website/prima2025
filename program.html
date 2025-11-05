@@ -50,21 +50,55 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
-            <li class="nav-item"><a class="nav-link click-scroll" href="index.html#section_2">CALL FOR PAPERS</a></li>
-            <li class="nav-item"><a class="nav-link click-scroll" href="index.html#section_3">SPEAKERS</a></li>
-            <li class="nav-item"><a class="nav-link click-scroll" href="index.html#section_4">IMPORTANT DATES</a></li>
-            <li class="nav-item"><a class="nav-link click-scroll" href="index.html#section_5">ORGANIZERS</a></li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">INFORMATION</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="modena.html">Discover Modena</a></li>
-                <li><a class="dropdown-item" href="venue.html">Venue</a></li>
-                <li><a class="dropdown-item" href="accommodation.html">Accommodation</a></li>
-              </ul>
-            </li>
+      <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
+
+        <!-- Calls dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            CALLS
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="index.html#section_2">Call for Papers</a></li>
+            <li><a class="dropdown-item" href="index.html#section_4">Important Dates</a></li>
           </ul>
-        </div>
+        </li>
+
+        <!-- Program dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            PROGRAM
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="program.html" data-no-scroll>Schedule</a></li>
+            <li><a class="dropdown-item" href="phd_day.html" target="_blank" data-no-scroll>PhD Day</a></li>
+            <li><a class="dropdown-item" href="papers.html" target="_blank" data-no-scroll>Accepted Papers</a></li>
+          </ul>
+        </li>
+
+        <!-- Speakers -->
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#section_3">SPEAKERS</a>
+        </li>
+
+        <!-- Organizers -->
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#section_5">ORGANIZERS</a>
+        </li>
+
+        <!-- Information dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            INFORMATION
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="modena.html" target="_blank">Discover Modena</a></li>
+            <li><a class="dropdown-item" href="venue.html" target="_blank">Venue</a></li>
+            <li><a class="dropdown-item" href="accommodation.html" target="_blank">Accommodation</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
       </div>
     </nav>
 
@@ -72,8 +106,16 @@
    <div class="container-xxl py-5 schedule-timeline">
   <div class="container">
     <div class="text-center mx-auto mt-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
-      <h1 class="mb-4 page-title-offset">Conference Schedule</h1>
+      <h1 class="mb-4 page-title-offset">Conference Schedule (Tentative)</h1>
+      <p class="schedule-info">
+  Presentations of full papers (F-ID) are scheduled for 15 minutes, including 12 minutes for the presentation and 3 minutes for discussion.<br> 
+  Presentations of short papers (S-ID) are scheduled for 10 minutes, including 8 minutes for the presentation and 2 minutes for discussion.<br>
+  All sessions take place at the <a href="venue.html" target="_blank">Camera di Commercio di Modena – Sala Leonelli</a>. 
+  Session chairs are responsible for keeping time and moderating the discussion.
+
     </div>
+
+
 
     <!-- Nav Tabs Giorni -->
     <ul class="nav justify-content-center mb-4" id="scheduleTabs" role="tablist">
@@ -96,103 +138,731 @@
 
       <!-- Day 1 -->
       <div class="tab-pane fade show active" id="day1" role="tabpanel">
-        <div class="row g-4">
-          <div class="col-md-6">
-            <div class="schedule-card p-4 shadow-sm">
-              <div class="session-time mb-2">09:00 - 09:30</div>
-              <h5 class="session-title">Opening Ceremony</h5>
-              <p class="session-speaker">Organizing Committee</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="schedule-card p-4 shadow-sm">
-              <div class="session-time mb-2">09:30 - 10:30</div>
-              <h5 class="session-title">Runtime Verification of Program Organization Units in Safe Programmable Logic Controller Systems</h5>
-              <p class="session-speaker">Hisham Unniyankal, Davide Ancona, Angelo Ferrando, Fabio Parodi, Alessandro Alessi and Federico Bottino</p>
-            </div>
-          </div>
+  <div class="row justify-content-center">
+    <div class="col-lg-11">
+
+      <!-- Opening Ceremony -->
+      <div class="schedule-session mb-5">
+        <div class="schedule-session-title">Registration & Opening Ceremony</div>
+        <div class="schedule-item">
+          <span class="time">09:00 am – 10:00 am</span>
+          <span class="paper-title"></span>
+          <span class="authors">Organising Committee</span>
         </div>
       </div>
+
+      <!-- Session: Agent & Multi-Agent learning -->
+      <div class="schedule-session mb-5">
+        <div class="schedule-session-title">Agent &amp; Multi-Agent learning
+          <span class="session-chair">(Chair: TBA)</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">10:00 am – 10:10 am</span>
+          <span class="paper-title">S-34 • Modular Successor Representations for Transfer Learning in Social Navigation</span>
+          <span class="authors">Adonis Kattan, Maxime Guériau, Alexandre Pauchet</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">10:10 am – 10:20 am</span>
+          <span class="paper-title">S-72 • AOAD-MAT: Transformer-based Multi-Agent Deep Reinforcement Learning Model considering Agents' Order of Action Decisions</span>
+          <span class="authors">Shota Takayama, Katsuhide Fujita</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">10:20 am – 10:30 am</span>
+          <span class="paper-title">S-73 • CULTURA: A Multi-Agent Neural–Symbolic System for Culturally-Aware Arabic Story Generation</span>
+          <span class="authors">Mossab Ibrahim</span>
+        </div>
+     
+
+       <div class="schedule-item">
+          <span class="time">10:30 am – 10:45 am</span>
+          <span class="paper-title">F-74 • Neural-Symbolic AI for Culturally Adaptive Arabic Sign-Language Translation with Motion-Capture Avatars</span>
+          <span class="authors">Mossab Ibrahim</span>
+        </div>
+  
+
+      <div class="schedule-item">
+          <span class="time">10:45 am – 10:55 am</span>
+          <span class="paper-title">S-98 • Expressive Reward Synthesis with Runtime Monitoring Language</span>
+          <span class="authors">Daniel Donnelly, Francesco Belardinelli</span>
+        </div>
+   
+
+      <div class="schedule-item">
+          <span class="time">10:55 am – 11:10 am</span>
+          <span class="paper-title">F-117 • XAI-Guided Feature Pruning for Deep Reinforcement Learning in EV Routing Problems</span>
+          <span class="authors">Dimeth Nouicer, Ikbal Chammakhi Msadaa, Khaled Grayaa</span>
+        </div>
+
+      </div>
+
+      <!-- Coffee Break -->
+      <div class="schedule-session break mb-5">
+        <div class="schedule-session-title">Coffee Break</div>
+        <div class="schedule-item">
+          <span class="time">11:10 am – 11:40 am</span>
+          <span class="paper-title"></span>
+          <span class="authors">All Participants</span>
+        </div>
+      </div>
+
+<!-- Invited Speaker -->
+<div class="mb-5">
+  <div class="schedule-card invited p-4 shadow-lg">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <div class="d-flex align-items-center">
+        <img src="images/baldoni.jpg" alt="Matteo Baldoni" class="invited-photo">
+        <div class="ms-3">
+          <h5 class="speaker-name mb-1">Matteo Baldoni</h5>
+          <p class="speaker-affiliation mb-0">Università degli Studi di Torino, Italy</p>
+        </div>
+      </div>
+      <span class="badge invited-badge">
+        <i class="bi bi-star-fill me-1"></i>Invited Talk
+      </span>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-start flex-wrap">
+      <p class="session-time mb-1">11:40 am – 12:40 pm</p>
+      <h4 class="invited-title mb-0 ms-3 flex-grow-1">
+        Programming Interaction-Oriented Cognitive Agents
+      </h4>
+    </div>
+  </div>
+</div>
+
+      <!-- Lunch Break -->
+      <div class="schedule-session break mb-5">
+        <div class="schedule-session-title">Lunch Break</div>
+        <div class="schedule-item">
+          <span class="time">12:40 pm – 02:00 pm</span>
+          <span class="paper-title"></span>
+          <span class="authors">All Participants</span>
+        </div>
+      </div>
+
+<!-- Session: Logic & Reasoning -->
+      <div class="schedule-session mb-5">
+        <div class="schedule-session-title">Logic &amp; Reasoning (Part 1)
+          <span class="session-chair">(Chair: TBA)</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">02:00 pm  – 02:15 pm</span>
+          <span class="paper-title">F-28 • Symbolic Representation for Graded Dynamic Epistemic Logic</span>
+          <span class="authors">Sébastien Gamblin</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">02:15 pm – 02:30 pm</span>
+          <span class="paper-title">F-50 • Tableaux for epistemic Gödel logic</span>
+          <span class="authors">Marta Bilkova, Daniil Kozhemiachenko, Thomas Ferguson</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">02:30 pm – 02:40 pm</span>
+          <span class="paper-title">S-52 • A Modal Logic for Temporal and Jurisdictional Classifier Models</span>
+          <span class="authors">Cecilia Di Florio, Huimin Dong, Antonino Rotolo</span>
+        </div>
+     
+
+       <div class="schedule-item">
+          <span class="time">02:40 pm – 02:50 pm</span>
+          <span class="paper-title">S-62 • Integrating Cognitive Reasoning into Medical Scheduling: A Transition from ASP Personas to L-DINF Agents</span>
+          <span class="authors">Stefania Costantini, Valentina Pitoni</span>
+        </div>
+  
+
+      <div class="schedule-item">
+          <span class="time">02:50 pm – 03:05 pm</span>
+          <span class="paper-title">F-82 • Discussion Graph Semantics of First-Order Logic with Equality for Reasoning about Discussion and Argumentation</span>
+          <span class="authors">Ryuta Arisaka</span>
+        </div>
+     </div>
+
+     <!-- Coffee Break -->
+      <div class="schedule-session break mb-5">
+        <div class="schedule-session-title">Coffee Break</div>
+        <div class="schedule-item">
+          <span class="time">03:05 pm – 03:30 pm</span>
+          <span class="paper-title"></span>
+          <span class="authors">All Participants</span>
+        </div>
+      </div>
+
+      <!-- Session: Logic & Reasoning -->
+      <div class="schedule-session mb-5">
+        <div class="schedule-session-title">Logic &amp; Reasoning (Part 2)
+          <span class="session-chair">(Chair: TBA)</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">03:30 pm  – 03:45 pm</span>
+          <span class="paper-title">F-102 • Colored Node Kayles: Algorithms and Computational Complexity</span>
+          <span class="authors">Tesshu Hanaka, Hirotaka Ono, Kanae Yoshiwatari</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">03:45 pm – 04:00 pm</span>
+          <span class="paper-title">F-108 • Defeasible Reasoning in Description Logics with Prototype Descriptions</span>
+          <span class="authors">Gabriele Sacco, Loris Bozzato, Oliver Kutz</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">04:00 pm – 04:15 pm</span>
+          <span class="paper-title">F-119 • ABA Disputes in ASP: Advancing Argument Games through Multi-Shot Solving</span>
+          <span class="authors">Martin Diller, Piotr Gorczyca</span>
+        </div>
+     </div>
+
+        <!-- Welcome Reception -->
+      <div class="schedule-session break mb-5">
+        <div class="schedule-session-title">Welcome Reception</div>
+        <div class="schedule-item">
+          <span class="time">18:00 pm – 21:00 pm</span>
+          <span class="paper-title">TBA</span>
+          <span class="authors">For pre-registered participants only</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
 
       <!-- Day 2 -->
-      <div class="tab-pane fade" id="day2" role="tabpanel">
-        <div class="row g-4">
-          <div class="col-md-6">
-            <div class="schedule-card p-4 shadow-sm">
-              <div class="session-time mb-2">09:00 - 09:30</div>
-              <h5 class="session-title">Welcome Remarks</h5>
-              <p class="session-speaker">Chairperson</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="schedule-card invited p-4 shadow-lg">
-  <div class="d-flex justify-content-between mb-3">
-    <span class="session-time">09:30 - 10:30</span>
-    <span class="badge bg-light text-dark fw-bold">Invited Speaker</span>
-  </div>
-  <div class="d-flex align-items-center mb-2">
-    <img src="images/ito.jpg" alt="Speaker" class="invited-icon">
-    <h5 class="session-title mb-0">Future of AI</h5>
-  </div>
-  <p class="session-speaker">Dr. Maria Rossi</p>
-</div>
+        <div class="tab-pane fade show" id="day2" role="tabpanel">
+  <div class="row justify-content-center">
+    <div class="col-lg-11">
 
-          </div>
+     <!-- Session: Algorithmic Game Theory -->
+      <div class="schedule-session mb-5">
+        <div class="schedule-session-title">Algorithmic Game Theory
+          <span class="session-chair">(Chair: TBA)</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">09:00 am  – 09:15 am</span>
+          <span class="paper-title">F-10 • Predicting the Outcome of Ongoing Automated Negotiations</span>
+          <span class="authors">Tamara Florijn, Mick Tijdeman, Pınar Yolum, Tim Baarslag</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">09:15 am – 09:30 am</span>
+          <span class="paper-title">F-47 • OSP Diffusion Auctions</span>
+          <span class="authors">Diodato Ferraioli, Carmine Ventre</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">09:30 am – 09:40 am</span>
+          <span class="paper-title">S-68 • MiCRO for Multilateral Negotiations</span>
+          <span class="authors">David Aguilera-Luzon, Dave de Jonge, Javier Larrosa</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">09:40 am – 09:55 am</span>
+          <span class="paper-title">F-99 • Autonomy with Structural Task Allocation Games: From Inefficiency to Optimality</span>
+          <span class="authors">Jaber Valizadeh, Dongmo Zhang, Omar Mubin</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">09:55 am – 10:05 am</span>
+          <span class="paper-title">S-103 • A Stackelberg Game Model for EV Charging Markets</span>
+          <span class="authors">Qi Wang, Dongmo Zhang</span>
+        </div>
+     </div>
+
+ <!-- Coffee Break -->
+      <div class="schedule-session break mb-5">
+        <div class="schedule-session-title">Coffee Break</div>
+        <div class="schedule-item">
+          <span class="time">10:05 am – 10:30 am</span>
+          <span class="paper-title"></span>
+          <span class="authors">All Participants</span>
         </div>
       </div>
+
+<!-- Invited Speaker -->
+<div class="mb-5">
+  <div class="schedule-card invited p-4 shadow-lg">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <div class="d-flex align-items-center">
+        <img src="images/ito.jpg" alt="Takayuki Ito" class="invited-photo">
+        <div class="ms-3">
+          <h5 class="speaker-name mb-1">Takayuki Ito</h5>
+          <p class="speaker-affiliation mb-0">Kyoto University, Japan</p>
+        </div>
+      </div>
+      <span class="badge invited-badge">
+        <i class="bi bi-star-fill me-1"></i>Invited Talk
+      </span>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-start flex-wrap">
+      <p class="session-time mb-1">10:30 am – 11:30 am</p>
+      <h4 class="invited-title mb-0 ms-3 flex-grow-1">
+        HyperDemocracy: Large-scale Consensus Support Platform based on Multiagent Systems
+      </h4>
+    </div>
+  </div>
+</div>
+
+      <!-- Session: Collaborations & Coordination -->
+      <div class="schedule-session mb-5">
+        <div class="schedule-session-title">Collaborations & Coordination
+          <span class="session-chair">(Chair: TBA)</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">11:30 am – 11:45 am</span>
+          <span class="paper-title">F-32 • Solving Dec-POMDPs as POMDPs Using Imitation Learning</span>
+          <span class="authors">Ronen Brafman, Ron Keller</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">11:45 am – 12:00 pm</span>
+          <span class="paper-title">F-43 • HMCF: A Human-in-the-loop Multi-Robot Collaboration Framework Based on Large Language Models</span>
+          <span class="authors">Zhaoxing Li, Yue Wang, Wenbo Wu, Yanran Xu, Sebastian Stein</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">12:00 pm – 12:15 pm</span>
+          <span class="paper-title">F-45 • Adaptive Multi-Round Influence Maximization with Limited Information</span>
+          <span class="authors">Vincenzo Auletta, Francesco Carbone, Diodato Ferraioli, Cosimo Vinci</span>
+        </div>
+     
+
+       <div class="schedule-item">
+          <span class="time">12:15 pm – 12:25 pm</span>
+          <span class="paper-title">S-87 • A Synergistic Reinforcement Learning Framework for Adaptive, Privacy-Preserving Trust and Collusion Detection in Multi-Agent Systems</span>
+          <span class="authors">Hariprasauth Ramamoorthy, Suresh Sundaram, Rajkumar Vaidyanathan</span>
+        </div>
+  
+
+      <div class="schedule-item">
+          <span class="time">12:25 pm – 12:40 pm</span>
+          <span class="paper-title">F-124 • From Explicit Allowances to Defeasible Deontic Operators: A Modal View</span>
+          <span class="authors">Agata Ciabattoni, Josephine Dik, Emiliano Lorini, Dominik Pichler, Dmitry Rozplokhas</span>
+      </div>
+   </div>
+
+      <!-- Lunch Break -->
+      <div class="schedule-session break mb-5">
+        <div class="schedule-session-title">Lunch Break</div>
+        <div class="schedule-item">
+          <span class="time">12:40 pm – 02:00 pm</span>
+          <span class="paper-title"></span>
+          <span class="authors">All Participants</span>
+        </div>
+      </div>
+
+<!-- Session: Engineering Multi-Agent Systems -->
+      <div class="schedule-session mb-5">
+        <div class="schedule-session-title"> Engineering Multi-Agent Systems
+          <span class="session-chair">(Chair: Angelo Ferrando)</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">02:00 pm  – 02:10 pm</span>
+          <span class="paper-title">S-30 • Language Model-Driven Agent-based Framework for Generating and Evaluating Cyber Attack Scenarios</span>
+          <span class="authors">Hyeongjin Ahn, Jihye Kim, Minsu Park, Taeeun Kim, Saewoom Lee, Seul-Ki Choi, Moohong Min, Eunil Park</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">02:10 pm – 02:20 pm</span>
+          <span class="paper-title">S-76 • MW-MAS: A Multi-Agent System for Multimodal Watermarking with Agent Orchestration</span>
+          <span class="authors">Lynn Choi, Minsu Park, Taeeun Kim, Eunil Park</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">02:20 pm – 02:35 pm</span>
+          <span class="paper-title">F-86 • An LLM and Embeddings-based Multi-Agentic System for Knowledge Graph Construction and Verification</span>
+          <span class="authors">Miranda Rossana Martínez Rodriguez, Ali Nouri, Zhennan Fei, Maria Hedblom</span>
+        </div>
+     
+
+       <div class="schedule-item">
+          <span class="time">02:35 pm – 02:45 pm</span>
+          <span class="paper-title">S-110 • On the Role of Causal Reasoning in Autonomous Agents and Multi-agent Systems</span>
+          <span class="authors">Stefano Mariani, Franco Zambonelli</span>
+        </div>
+  
+
+      <div class="schedule-item">
+          <span class="time">02:45 pm – 03:00 pm</span>
+          <span class="paper-title">F-130 • Deep Learning-Enhanced Multi-Agent Architecture for Real-Time UAM Trajectory Prediction and Collision Risk Assessment</span>
+          <span class="authors">Yoon Hyewon, Yoon Seungwon, Lee Kyuchul</span>
+        </div>
+     </div>
+
+     <!-- Coffee Break -->
+      <div class="schedule-session break mb-5">
+        <div class="schedule-session-title">Coffee Break</div>
+        <div class="schedule-item">
+          <span class="time">03:00 pm – 03:30 pm</span>
+          <span class="paper-title"></span>
+          <span class="authors">All Participants</span>
+        </div>
+      </div>
+
+      <!-- Session: Agent-based modeling & simulation -->
+      <div class="schedule-session mb-5">
+        <div class="schedule-session-title">Agent-based modeling & simulation 
+          <span class="session-chair">(Chair: TBA)</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">03:30 pm  – 03:40 pm</span>
+          <span class="paper-title">S-14 • Agent-Based Simulation of a Financial Market with Large Language Models</span>
+          <span class="authors">Ryuji Hashimoto, Takehiro Takayanagi, Masahiro Suzuki, Kiyoshi Izumi</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">03:40 pm – 03:55 pm</span>
+          <span class="paper-title">F-27 • Building LLM-Based Artificial Market Simulations: Can LLMs Function as Agents in Multi-Agent Simulations for Finance?</span>
+          <span class="authors">Masanori Hirano</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">03:55 pm – 04:05 pm</span>
+          <span class="paper-title">S-33 • Towards Neuro-Symbolic Conceptual Blending</span>
+          <span class="authors">Mena Leemhuis, Oliver Kutz</span>
+        </div>
+
+     <div class="schedule-item">
+          <span class="time">04:05 pm – 04:20 pm</span>
+          <span class="paper-title">F-44 • Strategic Agent-Based Equilibrium Models for Urban Mobility: the Traffic Filter Location Problem</span>
+          <span class="authors">Harry Clough, Gennaro Auricchio, Jie Zhang</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">04:20 pm – 04:35 pm</span>
+          <span class="paper-title">F-56 • A Mission-Aware Coordinated Adaptation Mechanism for Enhancing Resilience of EO Satellite Constellations</span>
+          <span class="authors">Mohammad Reza Jabbarpour, Ghaith El-Dalahmeh, Hassam Tahir, Bao Quoc Vo, Ryszard Kowalczyk, Travis Bessell, James Barr</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">04:35 pm – 04:50 pm</span>
+          <span class="paper-title">F-107 • Modeling Hawkish-Dovish Latent Beliefs in Multi-Agent Debate-Based LLMs for Monetary Policy Decision Classification</span>
+          <span class="authors">Kaito Takano, Masanori Hirano, Kei Nakagawa</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">04:50 pm – 05:05 pm</span>
+          <span class="paper-title">F-114 • Agent-based Cyclist Model for Shared Space Traffic Simulation</span>
+          <span class="authors">Awad Mukbil, Vinu Kamalasanan, Jörg P. Müller, Bernhard Friedrich</span>
+        </div>
+      </div>
+
+        <!-- Modena City Tour -->
+      <div class="schedule-session break mb-5">
+        <div class="schedule-session-title">Modena City Tour</div>
+        <div class="schedule-item">
+          <span class="time">05:30 pm – 07:00 pm</span>
+          <span class="paper-title">A guided tour of Modena’s historic centre, operated by <a href="https://www.modenatur.it/en" target="_blank">Modenatur</a></span>
+          <span class="authors">For pre-registered participants only</span>
+        </div>
+      </div>
+
+<!-- Social Dinner -->
+      <div class="schedule-session break mb-5">
+        <div class="schedule-session-title">Social Dinner</div>
+        <div class="schedule-item">
+          <span class="time">07:00 pm – 10:00 pm</span>
+          <span class="paper-title">At <a href="https://www.ristorantezelmira.com/index_en.htm" target="_blank">Zelmira</a> <small>(Via San Giacomo 17, 41121 Modena, Italy)</small></span>
+          <span class="authors">For pre-registered participants only</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
 
       <!-- Day 3 -->
-      <div class="tab-pane fade" id="day3" role="tabpanel">
-        <div class="row g-4">
-  <div class="col-md-6">
-    <div class="schedule-card p-4 shadow-sm">
-      <div class="session-time mb-2">09:00 - 09:30</div>
-      <h5 class="session-title">Opening Ceremony</h5>
-      <p class="session-speaker">Organizing Committee</p>
-    </div>
-  </div>
-  <div class="col-md-6">
-    <div class="schedule-card p-4 shadow-sm">
-      <div class="session-time mb-2">09:30 - 10:30</div>
-      <h5 class="session-title">Keynote: Multi-Agent Systems</h5>
-      <p class="session-speaker">Prof. Alice Smith</p>
-    </div>
-  </div>
-  <div class="col-md-6">
-    <div class="schedule-card p-4 shadow-sm">
-      <div class="session-time mb-2">10:30 - 11:00</div>
-      <h5 class="session-title">Coffee Break</h5>
-      <p class="session-speaker">All Participants</p>
-    </div>
-  </div>
-  <div class="col-md-6">
-    <div class="schedule-card p-4 shadow-sm">
-      <div class="session-time mb-2">11:00 - 11:30</div>
-      <h5 class="session-title">Keynote: Multi-Agent Systems</h5>
-      <p class="session-speaker">Prof. Alice Smith</p>
-    </div>
-</div>
-      </div>
+       <div class="tab-pane fade show" id="day3" role="tabpanel">
+  <div class="row justify-content-center">
+    <div class="col-lg-11">
+
+     <!-- Session: Industrial Track -->
+      <div class="schedule-session mb-5">
+        <div class="schedule-session-title">Industrial Track
+          <span class="session-chair">(Chair: TBA)</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">09:00 am  – 10:00 am</span>
+          <span class="paper-title">TBA</span>
+          <span class="authors">TBA</span>
+        </div>
+     </div>
+
+ <!-- Coffee Break -->
+      <div class="schedule-session break mb-5">
+        <div class="schedule-session-title">Coffee Break</div>
+        <div class="schedule-item">
+          <span class="time">10:00 am – 10:30 am</span>
+          <span class="paper-title"></span>
+          <span class="authors">All Participants</span>
+        </div>
       </div>
 
-      <!-- Day 4 -->
-      <div class="tab-pane fade" id="day4" role="tabpanel">
-        <div class="row g-4">
-          <div class="col-md-6">
-            <div class="schedule-card p-4 shadow-sm">
-              <div class="session-time mb-2">09:00 - 09:30</div>
-              <h5 class="session-title">Closing Remarks</h5>
-              <p class="session-speaker">Organizing Committee</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="schedule-card p-4 shadow-sm">
-              <div class="session-time mb-2">09:30 - 10:30</div>
-              <h5 class="session-title">Panel Discussion</h5>
-              <p class="session-speaker">Experts</p>
-            </div>
-          </div>
+       <!-- Session: Industrial Track -->
+      <div class="schedule-session mb-5">
+        <div class="schedule-session-title">Industrial Track
+          <span class="session-chair">(Chair: TBA)</span>
         </div>
+
+        <div class="schedule-item">
+          <span class="time">10:30 am  – 11:30 am</span>
+          <span class="paper-title">TBA</span>
+          <span class="authors">TBA</span>
+        </div>
+     </div>
+
+<!-- Invited Speaker -->
+<div class="mb-5">
+  <div class="schedule-card invited p-4 shadow-lg">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <div class="d-flex align-items-center">
+        <img src="images/lomuscio.jpg" alt="Alessio Lomuscio" class="invited-photo">
+        <div class="ms-3">
+          <h5 class="speaker-name mb-1">Alessio Lomuscio</h5>
+          <p class="speaker-affiliation mb-0">Imperial College London, UK</p>
+        </div>
+      </div>
+      <span class="badge invited-badge">
+        <i class="bi bi-star-fill me-1"></i>Invited Talk
+      </span>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-start flex-wrap">
+      <p class="session-time mb-1">11:30 am – 12:30 am</p>
+      <h4 class="invited-title mb-0 ms-3 flex-grow-1">
+        Towards verifying neural-symbolic multi-agent systems
+      </h4>
+    </div>
+  </div>
+</div>
+
+      <!-- Lunch Break -->
+      <div class="schedule-session break mb-5">
+        <div class="schedule-session-title">Lunch Break</div>
+        <div class="schedule-item">
+          <span class="time">12:30 pm – 02:00 pm</span>
+          <span class="paper-title"></span>
+          <span class="authors">All Participants</span>
+        </div>
+      </div>
+
+      <!-- Invited Speaker ERC -->
+<div class="mb-5">
+  <div class="schedule-card invited erc p-4 shadow-lg">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <div class="d-flex align-items-center">
+        <img src="images/erc.png" alt="" class="invited-photo">
+        <div class="ms-3">
+          <h5 class="speaker-name mb-1">TBA</h5>
+          <p class="speaker-affiliation mb-0"></p>
+        </div>
+      </div>
+      <span class="badge erc-badge">
+        <i class="bi bi-award-fill me-1"></i>ERC Speaker
+      </span>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-start flex-wrap">
+      <p class="session-time mb-1">02:00 pm – 03:00 pm</p>
+      <h4 class="invited-title mb-0 ms-3 flex-grow-1">
+        TBA
+      </h4>
+    </div>
+  </div>
+</div>
+
+<!-- Coffee Break -->
+      <div class="schedule-session break mb-5">
+        <div class="schedule-session-title">Coffee Break</div>
+        <div class="schedule-item">
+          <span class="time">03:00 pm – 03:30 pm</span>
+          <span class="paper-title"></span>
+          <span class="authors">All Participants</span>
+        </div>
+      </div>
+
+<!-- Session: Engineering Multi-Agent Systems -->
+      <div class="schedule-session mb-5">
+        <div class="schedule-session-title"> Computational social choice
+          <span class="session-chair">(Chair: TBA)</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">03:30 pm  – 03:40 pm</span>
+          <span class="paper-title">S-20 • Strategyproof Matching with Maximum and Minimum Quotas for Two Types of Members</span>
+          <span class="authors">Ryuji Oomori, Yoshifumi Manabe</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">03:40 pm – 03:55 pm</span>
+          <span class="paper-title">F-25 • Metric Distortion of STV on the Line and the Impact of Voter Turnout</span>
+          <span class="authors">Barbara Anthony, Christine Chung, Ananya Das, Charles Lincoln, Krishh Tipnis, Kate Vento</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">03:55 pm – 04:10 pm</span>
+          <span class="paper-title">F-31 • Questions about Quantities: Epistemic Numerical Estimate Aggregation</span>
+          <span class="authors">Jonas Karge</span>
+        </div>
+     
+
+       <div class="schedule-item">
+          <span class="time">04:10 pm – 04:25 pm</span>
+          <span class="paper-title">F-78 • Fair Mechanisms for Replicable Resources: A General Approach based on Analogical Beneficence</span>
+          <span class="authors">Björn Filter, Ralf Möller, Özgür Özçep</span>
+        </div>
+  
+
+      <div class="schedule-item">
+          <span class="time">04:25 pm – 04:35 pm</span>
+          <span class="paper-title">S-79 • A Ratio-Based Shapley Value for Collaborative Machine Learning</span>
+          <span class="authors">Björn Filter, Ralf Möller, Özgür Özçep</span>
+        </div>
+     </div>
+
+
+      <!-- Session:  Ethics & social issues -->
+      <div class="schedule-session mb-5">
+        <div class="schedule-session-title"> Ethics & social issues
+          <span class="session-chair">(Chair: TBA)</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">04:35 pm  – 04:45 pm</span>
+          <span class="paper-title">S-48 • Influence Maximization in Unknown Social Networks: A Contextual Bandit Approach</span>
+          <span class="authors">Vincenzo Auletta, Diodato Ferraioli, Grazia Ferrara</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">04:45 pm – 04:55 pm</span>
+          <span class="paper-title">S-60 • Effective Use of LLMs via Counterfactual Reasoning for Transparent Recommendation Explanations</span>
+          <span class="authors">Emre Kuru, Reyhan Aydoğan</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">04:55 pm – 05:05 pm</span>
+          <span class="paper-title">S-85 • A Formal Methodology for Risk Estimation in Business Process Management</span>
+          <span class="authors">Matteo Cristani, Tewabe Chekole Workneh, Claudio Tomazzoli, Federica Paci</span>
+        </div>
+
+         <div class="schedule-item">
+          <span class="time">05:05 pm – 05:15 pm</span>
+          <span class="paper-title">S-100 • RAISE: A Unified Framework for Responsible AI Scoring and Evaluation</span>
+          <span class="authors">Phuc Truong Loc Nguyen, Thanh Hung Do</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Day 4 -->
+      <div class="tab-pane fade show" id="day4" role="tabpanel">
+  <div class="row justify-content-center">
+    <div class="col-lg-11">
+
+     <!-- Session: PhD Research Presentations -->
+      <div class="schedule-session mb-5">
+        <div class="schedule-session-title">PhD Research Presentations
+          <span class="session-chair">(Chair: TBA)</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">09:00 am  – 10:00 am</span>
+          <span class="paper-title">TBA</span>
+          <span class="authors">TBA</span>
+        </div>
+     </div>
+
+ <!-- Coffee Break -->
+      <div class="schedule-session break mb-5">
+        <div class="schedule-session-title">Coffee Break</div>
+        <div class="schedule-item">
+          <span class="time">10:00 am – 10:30 am</span>
+          <span class="paper-title"></span>
+          <span class="authors">All Participants</span>
+        </div>
+      </div>
+
+       <!-- Session: PhD Research Presentations -->
+      <div class="schedule-session mb-5">
+        <div class="schedule-session-title">PhD Research Presentations
+          <span class="session-chair">(Chair: TBA)</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">10:30 am  – 12:30 pm</span>
+          <span class="paper-title">TBA</span>
+          <span class="authors">TBA</span>
+        </div>
+     </div>
+
+      <!-- Lunch Break -->
+      <div class="schedule-session break mb-5">
+        <div class="schedule-session-title">Lunch Break</div>
+        <div class="schedule-item">
+          <span class="time">12:30 pm – 02:00 pm</span>
+          <span class="paper-title"></span>
+          <span class="authors">All Participants</span>
+        </div>
+      </div>
+
+       <!-- Invited Speaker ERC -->
+  <div class="mb-5">
+  <div class="schedule-card invited erc p-4 shadow-lg">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <div class="d-flex align-items-center">
+        <img src="images/erc.png" alt="" class="invited-photo">
+        <div class="ms-3">
+          <h5 class="speaker-name mb-1">TBA</h5>
+          <p class="speaker-affiliation mb-0"></p>
+        </div>
+      </div>
+      <span class="badge erc-badge">
+        <i class="bi bi-award-fill me-1"></i>ERC Speaker
+      </span>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-start flex-wrap">
+      <p class="session-time mb-1">02:00 pm – 03:00 pm</p>
+      <h4 class="invited-title mb-0 ms-3 flex-grow-1">
+        TBA
+      </h4>
+    </div>
+  </div>
+</div>
+
+<!-- Coffee Break -->
+      <div class="schedule-session break mb-5">
+        <div class="schedule-session-title">Coffee Break</div>
+        <div class="schedule-item">
+          <span class="time">03:00 pm – 03:30 pm</span>
+          <span class="paper-title"></span>
+          <span class="authors">All Participants</span>
+        </div>
+      </div>
+
+<!-- Session: PhD Research Presentations -->
+      <div class="schedule-session mb-5">
+        <div class="schedule-session-title">PhD Research Presentations
+          <span class="session-chair">(Chair: TBA)</span>
+        </div>
+
+        <div class="schedule-item">
+          <span class="time">03:30 am  – 05:00 pm</span>
+          <span class="paper-title">TBA</span>
+          <span class="authors">TBA</span>
+        </div>
+     </div>
       </div>
 
     </div>
@@ -255,6 +925,7 @@
             <ul class="list-unstyled small">
               <li><a href="index.html#section_2" class="site-footer-link small">Call for Papers</a></li>
               <li><a href="index.html#section_3" class="site-footer-link small">Speakers</a></li>
+              <li><a href="program.html" target="_blank" class="site-footer-link small">Schedule</a></li>
               <li><a href="index.html#section_4" class="site-footer-link small">Important Dates</a></li>
               <li><a href="index.html#section_5" class="site-footer-link small">Organizers</a></li>
               <li><a href="modena.html" class="site-footer-link small">Discover Modena</a></li>
