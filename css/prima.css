@@ -1687,3 +1687,17 @@ li.invited-speakers {
 }
 
 
+.paper-title.with-logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.paper-title.with-logo img {
+  height: 20px;
+}
+
+.badge.invited-badge.abstract-trigger, .badge.erc-badge.abstract-trigger {
+  cursor: pointer;
+}
+
+
