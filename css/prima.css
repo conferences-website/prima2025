@@ -1391,13 +1391,23 @@ background: #ffd60a;
 
 /* Speaker section */
 .invited-photo {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+  display: block;            /* forza il rispetto delle dimensioni */
+  max-width: none !important; 
+  height: 80px !important;   
+  width: 80px !important;
   object-fit: cover;
+  border-radius: 50%;
   border: 3px solid #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
+@media (max-width: 576px) {
+  .invited-photo {
+    width: 65px !important;
+    height: 65px !important;
+  }
+}
+
 
 .invited-badge {
   background: #fff;
@@ -1700,4 +1710,26 @@ li.invited-speakers {
   cursor: pointer;
 }
 
+.schedule-card .invited-title {
+  min-width: 100%;
+  margin-top: 0.5rem;
+}
+
+.schedule-card .abstract-trigger {
+  margin-top: 0.5rem;
+}
+
+.invited-photo {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media (max-width: 576px) {
+  .invited-photo {
+    width: 65px;
+    height: 65px;
+  }
+}
 
